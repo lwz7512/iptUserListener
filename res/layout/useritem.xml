@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 用户名 -->
+	<TextView android:id="@+id/account_tv" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"  android:layout_marginLeft="10dp"
+		android:layout_alignParentLeft="true"
+		android:layout_marginTop="6dp"
+		android:textColor="#06C"
+		android:textStyle="bold"
+		android:textSize="16sp"
+		android:text="account"/>
+	<!-- 相对时间 -->
+	<TextView android:id="@+id/applytime_tv"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentRight="true" 
+			android:layout_marginRight="10dp"
+			android:text="time"
+			/>	
+	<!-- 申请理由 -->
+	<TextView android:id="@+id/applyreason_tv"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dp"
+	    android:layout_below="@id/account_tv"
+	    android:layout_alignLeft="@id/account_tv"
+	    android:textColor="#333"
+	    android:text="reason"/>
+</RelativeLayout>

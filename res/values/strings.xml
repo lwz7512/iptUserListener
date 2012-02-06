@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, IptUserListenerActivity!</string>
+    <string name="app_name">用户审批</string>
+    <string name="admin_name">小辣椒 </string>
+    <string name="new_applycants">有新用户提交申请了: </string>
+            
+    <string name="examine_user">用户审批</string>
+    <string name="current_applycants">当前申请者：</string>
+    <string name="accept_applycants">同意</string>
+    <string name="decline_applycants">拒绝 </string>
+    
+    <!-- 时间 -->
+	<string name="tweet_created_at_beautify_prefix">大约</string>
+	<string name="tweet_created_at_beautify_sec">秒</string>
+	<string name="tweet_created_at_beautify_min">分钟</string>
+	<string name="tweet_created_at_beautify_hour">小时</string>
+	<string name="tweet_created_at_beautify_day">天</string>
+	<string name="tweet_created_at_beautify_suffix">前</string>    
+</resources>
