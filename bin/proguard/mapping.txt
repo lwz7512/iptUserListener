@@ -1,0 +1,280 @@
+com.ybcx.ipintu.IptUserAdapter -> com.ybcx.ipintu.a:
+    android.view.LayoutInflater mInflater -> a
+    java.util.List users -> b
+    android.content.Context ctxt -> c
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    void refresh(java.util.List) -> a
+com.ybcx.ipintu.IptUserAdapter$ViewHolder -> com.ybcx.ipintu.g:
+    android.widget.TextView account -> a
+    android.widget.TextView applyTime -> b
+    android.widget.TextView applyReason -> c
+com.ybcx.ipintu.IptUserListenerActivity -> com.ybcx.ipintu.IptUserListenerActivity:
+    com.ybcx.ipintu.db.UserCacheImpl cache -> a
+    android.widget.ListView user_lv -> b
+    com.ybcx.ipintu.IptUserAdapter user_adptr -> c
+    com.ybcx.ipintu.db.Applycant currentUser -> d
+    com.ybcx.ipintu.task.GenericTask mSendTask -> e
+    android.content.SharedPreferences mPref -> f
+    android.widget.AdapterView$OnItemClickListener listener -> g
+    android.content.DialogInterface$OnClickListener okListener -> h
+    android.content.DialogInterface$OnClickListener cancelListener -> i
+    com.ybcx.ipintu.task.TaskListener mSendTaskListener -> j
+    android.content.DialogInterface$OnClickListener settingIntervalListener -> k
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void setPreferenceValue(int) -> a
+    void onDestroy() -> onDestroy
+    com.ybcx.ipintu.IptUserAdapter access$0(com.ybcx.ipintu.IptUserListenerActivity) -> a
+    void access$1(com.ybcx.ipintu.IptUserListenerActivity,com.ybcx.ipintu.db.Applycant) -> a
+    void access$2(com.ybcx.ipintu.IptUserListenerActivity) -> b
+    void access$3(com.ybcx.ipintu.IptUserListenerActivity,boolean) -> a
+    void access$4(com.ybcx.ipintu.IptUserListenerActivity) -> c
+    void access$5(com.ybcx.ipintu.IptUserListenerActivity,int) -> a
+com.ybcx.ipintu.IptUserListenerActivity$1 -> com.ybcx.ipintu.d:
+    com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.ybcx.ipintu.IptUserListenerActivity$2 -> com.ybcx.ipintu.e:
+    com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.ybcx.ipintu.IptUserListenerActivity$3 -> com.ybcx.ipintu.f:
+    com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.ybcx.ipintu.IptUserListenerActivity$4 -> com.ybcx.ipintu.b:
+    com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
+    void onPreExecute$50df3973() -> a
+    void onPostExecute$50f0fa41(com.ybcx.ipintu.task.TaskResult) -> a
+    void deliverResponseString$552c4e01() -> b
+com.ybcx.ipintu.IptUserListenerActivity$5 -> com.ybcx.ipintu.c:
+    com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.ybcx.ipintu.db.Applycant -> com.ybcx.ipintu.b.e:
+    java.lang.String id -> a
+    java.lang.String account -> b
+    java.lang.String applyReason -> c
+    java.lang.String applyTime -> d
+com.ybcx.ipintu.db.IpintuDB -> com.ybcx.ipintu.b.c:
+    java.lang.String TAG -> a
+    com.ybcx.ipintu.db.IpintuDB instance -> b
+    com.ybcx.ipintu.db.IpintuDB$DatabaseHelper mOpenHelper -> c
+    com.ybcx.ipintu.db.IpintuDB getInstance(android.content.Context) -> a
+    android.database.sqlite.SQLiteDatabase getDb$522330d0() -> a
+    java.lang.String access$0() -> b
+com.ybcx.ipintu.db.IpintuDB$DatabaseHelper -> com.ybcx.ipintu.b.d:
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+com.ybcx.ipintu.db.Query -> com.ybcx.ipintu.b.a:
+    java.util.ArrayList binds -> a
+    android.database.sqlite.SQLiteDatabase mDb -> b
+    java.lang.String mTable -> c
+    java.lang.String[] mColumns -> d
+    java.lang.String mSelection -> e
+    java.lang.String[] mSelectionArgs -> f
+    java.lang.String mGroupBy -> g
+    java.lang.String mHaving -> h
+    java.lang.String mOrderBy -> i
+    java.lang.String mLimit -> j
+    android.content.ContentValues mValues -> k
+    java.lang.String mNullColumnHack -> l
+    android.database.Cursor select() -> a
+    int delete() -> b
+    com.ybcx.ipintu.db.Query from(java.lang.String) -> a
+    com.ybcx.ipintu.db.Query where(java.lang.String,java.lang.String) -> a
+    com.ybcx.ipintu.db.Query orderBy(java.lang.String) -> b
+    void buildQuery() -> d
+    boolean preCheck() -> e
+    com.ybcx.ipintu.db.Query into(java.lang.String) -> c
+    com.ybcx.ipintu.db.Query values(android.content.ContentValues) -> a
+    long insert() -> c
+    java.lang.String toString() -> toString
+com.ybcx.ipintu.db.UserCacheImpl -> com.ybcx.ipintu.b.b:
+    android.database.sqlite.SQLiteDatabase ptdb -> a
+    void cacheNewApplycants(java.util.List) -> a
+    java.util.List getNewApplycants() -> a
+    void deleteAcceptApplycant(java.lang.String) -> a
+com.ybcx.ipintu.http.HttpAuthException -> com.ybcx.ipintu.a.a:
+com.ybcx.ipintu.http.HttpException -> com.ybcx.ipintu.a.b:
+    int statusCode -> a
+com.ybcx.ipintu.http.HttpRefusedException -> com.ybcx.ipintu.a.g:
+com.ybcx.ipintu.http.HttpServerException -> com.ybcx.ipintu.a.d:
+com.ybcx.ipintu.http.Response -> com.ybcx.ipintu.a.e:
+    org.apache.http.HttpResponse mResponse -> a
+    boolean mStreamConsumed -> b
+    java.util.regex.Pattern escaped -> c
+    java.lang.String asString() -> a
+    java.lang.String entityToString(org.apache.http.HttpEntity) -> a
+com.ybcx.ipintu.http.SimpleHttpClient -> com.ybcx.ipintu.a.c:
+    java.lang.String userId -> a
+    org.apache.http.impl.client.DefaultHttpClient mClient -> b
+    org.apache.http.client.HttpRequestRetryHandler requestRetryHandler -> c
+    com.ybcx.ipintu.http.Response post$6fd31d86(java.lang.String,java.util.ArrayList) -> a
+    com.ybcx.ipintu.http.Response httpRequest$3ee061bc$5623f1b4(java.lang.String,java.util.ArrayList,java.lang.String) -> a
+    java.net.URI createURI(java.lang.String) -> a
+    org.apache.http.client.methods.HttpUriRequest createMethod$1ff7fa58(java.lang.String,java.net.URI,java.util.ArrayList) -> a
+com.ybcx.ipintu.http.SimpleHttpClient$1 -> com.ybcx.ipintu.a.f:
+    boolean retryRequest(java.io.IOException,int,org.apache.http.protocol.HttpContext) -> retryRequest
+com.ybcx.ipintu.service.BootReceiver -> com.ybcx.ipintu.service.BootReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.ybcx.ipintu.service.UserService -> com.ybcx.ipintu.service.UserService:
+    android.os.PowerManager$WakeLock mWakeLock -> a
+    android.app.NotificationManager mNotificationManager -> b
+    com.ybcx.ipintu.task.GenericTask mRetrieveTask -> c
+    com.ybcx.ipintu.db.UserCacheImpl cache -> d
+    com.ybcx.ipintu.task.TaskListener mRetrieveTaskListener -> e
+    void onCreate() -> onCreate
+    int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+    void onDestroy() -> onDestroy
+    void schedule(android.content.Context) -> a
+    boolean isNetworkAvailable(android.content.Context) -> b
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void access$0(com.ybcx.ipintu.service.UserService,int) -> a
+    void access$1(com.ybcx.ipintu.service.UserService,java.util.List) -> a
+com.ybcx.ipintu.service.UserService$1 -> com.ybcx.ipintu.service.a:
+    com.ybcx.ipintu.service.UserService this$0 -> a
+    void onPostExecute$50f0fa41(com.ybcx.ipintu.task.TaskResult) -> a
+    void deliverRetrievedList(java.util.List) -> a
+com.ybcx.ipintu.task.Feedback -> com.ybcx.ipintu.c.f:
+com.ybcx.ipintu.task.GenericTask -> com.ybcx.ipintu.c.i:
+    com.ybcx.ipintu.task.TaskListener mListener -> a
+    com.ybcx.ipintu.task.Feedback mFeedback -> b
+    boolean isCancelable -> c
+    com.ybcx.ipintu.task.TaskResult _doInBackground(com.ybcx.ipintu.task.TaskParams[]) -> a
+    void _onPostExecute(com.ybcx.ipintu.task.TaskResult) -> a
+    void setListener(com.ybcx.ipintu.task.TaskListener) -> a
+    com.ybcx.ipintu.task.TaskListener getListener() -> a
+    void onCancelled() -> onCancelled
+    void onPreExecute() -> onPreExecute
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+    void update(java.util.Observable,java.lang.Object) -> update
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.ybcx.ipintu.task.RetrieveUserTask -> com.ybcx.ipintu.c.d:
+    java.lang.String TAG -> a
+    java.util.List retrievedApplycants -> b
+    com.ybcx.ipintu.http.SimpleHttpClient client -> c
+    void onPreExecute() -> onPreExecute
+    com.ybcx.ipintu.task.TaskResult _doInBackground(com.ybcx.ipintu.task.TaskParams[]) -> a
+    void jsonApplycantsToObjs(org.json.JSONArray) -> a
+    void _onPostExecute(com.ybcx.ipintu.task.TaskResult) -> a
+com.ybcx.ipintu.task.SendTask -> com.ybcx.ipintu.c.c:
+    java.lang.String postResult -> a
+    com.ybcx.ipintu.http.SimpleHttpClient client -> b
+    void onPreExecute() -> onPreExecute
+    com.ybcx.ipintu.task.TaskResult _doInBackground(com.ybcx.ipintu.task.TaskParams[]) -> a
+    void _onPostExecute(com.ybcx.ipintu.task.TaskResult) -> a
+com.ybcx.ipintu.task.TaskAdapter -> com.ybcx.ipintu.c.e:
+    void onPreExecute$50df3973() -> a
+    void onPostExecute$50f0fa41(com.ybcx.ipintu.task.TaskResult) -> a
+    void deliverRetrievedList(java.util.List) -> a
+    void deliverResponseString$552c4e01() -> b
+com.ybcx.ipintu.task.TaskListener -> com.ybcx.ipintu.c.a:
+    void onPreExecute$50df3973() -> a
+    void onPostExecute$50f0fa41(com.ybcx.ipintu.task.TaskResult) -> a
+    void deliverRetrievedList(java.util.List) -> a
+    void deliverResponseString$552c4e01() -> b
+com.ybcx.ipintu.task.TaskManager -> com.ybcx.ipintu.c.b:
+    java.lang.Integer CANCEL_ALL -> a
+com.ybcx.ipintu.task.TaskParams -> com.ybcx.ipintu.c.g:
+    java.util.HashMap params -> a
+    void put(java.lang.String,java.lang.Object) -> a
+    java.lang.Object get(java.lang.String) -> a
+    int getInt(java.lang.String) -> b
+com.ybcx.ipintu.task.TaskResult -> com.ybcx.ipintu.c.h:
+    com.ybcx.ipintu.task.TaskResult OK -> a
+    com.ybcx.ipintu.task.TaskResult FAILED -> b
+    com.ybcx.ipintu.task.TaskResult CANCELLED -> e
+    com.ybcx.ipintu.task.TaskResult JSON_PARSE_ERROR -> c
+    com.ybcx.ipintu.task.TaskResult NOT_FOLLOWED_ERROR -> f
+    com.ybcx.ipintu.task.TaskResult IO_ERROR -> d
+    com.ybcx.ipintu.task.TaskResult AUTH_ERROR -> g
+    com.ybcx.ipintu.task.TaskResult[] ENUM$VALUES -> h
+    com.ybcx.ipintu.task.TaskResult[] values() -> values
+    com.ybcx.ipintu.task.TaskResult valueOf(java.lang.String) -> valueOf
+com.ybcx.ipintu.util.DateTimeHelper -> com.ybcx.ipintu.d.a:
+    java.text.DateFormat AGO_FULL_DATE_FORMATTER -> a
+    java.lang.String getRelativeTimeByFormatDate(java.lang.String,android.content.Context) -> a
+org.acra.ACRA -> org.acra.f:
+    java.lang.String LOG_TAG -> a
+    android.os.Bundle mCrashResources -> b
+    android.os.Bundle getCrashResources() -> a
+org.acra.ConfigurationInspector -> org.acra.g:
+    android.util.SparseArray mHardKeyboardHiddenValues -> a
+    android.util.SparseArray mKeyboardValues -> b
+    android.util.SparseArray mKeyboardHiddenValues -> c
+    android.util.SparseArray mNavigationValues -> d
+    android.util.SparseArray mNavigationHiddenValues -> e
+    android.util.SparseArray mOrientationValues -> f
+    android.util.SparseArray mScreenLayoutValues -> g
+    android.util.SparseArray mTouchScreenValues -> h
+    android.util.SparseArray mUiModeValues -> i
+    java.util.HashMap mValueArrays -> j
+    java.lang.String toString(android.content.res.Configuration) -> a
+    java.lang.String activeFlags(android.util.SparseArray,int) -> a
+org.acra.CrashReportDialog -> org.acra.CrashReportDialog:
+    android.widget.EditText userComment -> b
+    java.lang.String mReportFileName -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    android.widget.EditText access$0(org.acra.CrashReportDialog) -> a
+org.acra.CrashReportDialog$1 -> org.acra.j:
+    org.acra.CrashReportDialog this$0 -> a
+    android.os.Bundle val$crashResources -> b
+    void onClick(android.view.View) -> onClick
+org.acra.CrashReportDialog$2 -> org.acra.k:
+    org.acra.CrashReportDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.acra.ErrorReporter -> org.acra.c:
+    java.lang.String LOG_TAG -> a
+    java.util.Properties mCrashProperties -> b
+    java.util.Map mCustomParameters -> c
+    java.lang.String mUserComment -> d
+    java.lang.Thread$UncaughtExceptionHandler mDfltExceptionHandler -> e
+    org.acra.ErrorReporter mInstanceSingleton -> f
+    android.content.Context mContext -> g
+    java.lang.String mInitialConfiguration -> h
+    org.acra.ReportingInteractionMode mReportingInteractionMode -> i
+    android.os.Bundle mCrashResources -> j
+    android.net.Uri mFormUri -> k
+    java.lang.String createCustomInfoString() -> c
+    org.acra.ErrorReporter getInstance() -> a
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+    java.lang.String saveCrashReportFile() -> d
+    java.lang.String[] getCrashReportFilesList() -> e
+    void checkAndSendReports(android.content.Context,java.lang.String,boolean) -> a
+    boolean storeToXML() -> f
+    void deletePendingReports() -> b
+    void setUserComment(java.lang.String) -> a
+    int getAPILevel() -> g
+    android.content.Context access$0(org.acra.ErrorReporter) -> a
+    android.os.Bundle access$1(org.acra.ErrorReporter) -> b
+org.acra.ErrorReporter$1 -> org.acra.a:
+    org.acra.ErrorReporter this$0 -> a
+    void run() -> run
+org.acra.ErrorReporter$2 -> org.acra.b:
+    org.acra.ErrorReporter this$0 -> a
+    boolean accept(java.io.File,java.lang.String) -> accept
+org.acra.ErrorReporter$ReportsSenderWorker -> org.acra.d:
+    java.lang.String mReportFileName -> a
+    boolean mSendOnlySilentReports -> b
+    org.acra.ErrorReporter this$0 -> c
+    void run() -> run
+    void setCommentReportFileName(java.lang.String) -> a
+org.acra.HttpUtils -> org.acra.i:
+    java.lang.String LOG_TAG -> a
+    javax.net.ssl.TrustManager[] TRUST_MANAGER -> b
+    org.apache.http.conn.ssl.AllowAllHostnameVerifier HOSTNAME_VERIFIER -> c
+    void doPost(java.util.Map,java.net.URL) -> a
+org.acra.NaiveTrustManager -> org.acra.e:
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+org.acra.ReportingInteractionMode -> org.acra.h:
+    org.acra.ReportingInteractionMode SILENT -> a
+    org.acra.ReportingInteractionMode NOTIFICATION -> b
+    org.acra.ReportingInteractionMode TOAST -> c
+    org.acra.ReportingInteractionMode[] ENUM$VALUES -> d
+    org.acra.ReportingInteractionMode[] values() -> values
+    org.acra.ReportingInteractionMode valueOf(java.lang.String) -> valueOf

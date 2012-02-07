@@ -31,6 +31,7 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.IBinder;
 import android.os.PowerManager;
@@ -47,6 +48,7 @@ import com.ybcx.ipintu.task.TaskAdapter;
 import com.ybcx.ipintu.task.TaskListener;
 import com.ybcx.ipintu.task.TaskParams;
 import com.ybcx.ipintu.task.TaskResult;
+import com.ybcx.ipintu.util.PreferenceConst;
 
 
 public class UserService extends Service {
@@ -59,6 +61,7 @@ public class UserService extends Service {
     private GenericTask mRetrieveTask;
 
     private UserCacheImpl cache;
+    
 
     @Override
     public void onCreate() {
@@ -68,8 +71,8 @@ public class UserService extends Service {
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
         mWakeLock.acquire();
-        mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-
+        mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);               
+        
         //先计划下一次任务
         schedule(UserService.this);        
        
@@ -174,11 +177,12 @@ public class UserService extends Service {
         Calendar c = new GregorianCalendar();
         int min = c.get(Calendar.MINUTE);
         
-        //check inteval
-        int interval = 2;
+        SharedPreferences mPref = context.getSharedPreferences(PreferenceConst.IPTCFG, 0);
+        //默认10分钟间隔
+        int interval = mPref.getInt(PreferenceConst.INTERVAL, 10);
         
         if(min % interval > 0){
-        	//变成整10分钟数
+        	//变成整n分钟数
         	min += (interval-min%interval); 
         }else{
         	min += interval;

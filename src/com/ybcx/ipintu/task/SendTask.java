@@ -37,9 +37,13 @@ public class SendTask extends GenericTask {
 		try {
 
 			int mode = param.getInt("mode");
+			String account = param.getString("account");
+			
 			ArrayList<BasicNameValuePair> nvs = new ArrayList<BasicNameValuePair>();
 			BasicNameValuePair methodParam = new BasicNameValuePair("method","accept");
+			BasicNameValuePair accountParam = new BasicNameValuePair("account",account);
 			nvs.add(methodParam);	
+			nvs.add(accountParam);	
 			
 			BasicNameValuePair optParam = null;
 			

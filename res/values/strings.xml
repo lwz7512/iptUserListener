@@ -10,6 +10,7 @@
     <string name="current_applycants">当前申请者：</string>
     <string name="accept_applycants">同意</string>
     <string name="decline_applycants">拒绝 </string>
+    <string name="cancel">取消 </string>
     
     <!-- 时间 -->
 	<string name="tweet_created_at_beautify_prefix">大约</string>
@@ -17,5 +18,21 @@
 	<string name="tweet_created_at_beautify_min">分钟</string>
 	<string name="tweet_created_at_beautify_hour">小时</string>
 	<string name="tweet_created_at_beautify_day">天</string>
-	<string name="tweet_created_at_beautify_suffix">前</string>    
+	<string name="tweet_created_at_beautify_suffix">前</string>  
+	
+	<!-- options menu -->
+	<string name="omenu_signout">注销</string>
+	<string name="omenu_refresh">刷新</string>
+	<string name="omenu_preferences">选项</string>
+	<string name="omenu_settings">设置</string>
+	<string name="omenu_search">搜索</string>
+	<string name="omenu_about">关于</string>
+	<string name="omenu_exit">退出</string>
+	<string name="omenu_help">帮助</string>  
+	
+	<string name="refresh_settings">更新间隔设置</string>
+	<string name="two_mins">2分钟</string>
+	<string name="five_mins">5分钟</string>
+	<string name="ten_mins">10分钟</string>
+	
 </resources>

@@ -28,18 +28,33 @@ public final class R {
         public static final int accept_applycants=0x7f040006;
         public static final int admin_name=0x7f040002;
         public static final int app_name=0x7f040001;
+        public static final int cancel=0x7f040008;
         public static final int current_applycants=0x7f040005;
         public static final int decline_applycants=0x7f040007;
         public static final int examine_user=0x7f040004;
+        public static final int five_mins=0x7f040019;
         public static final int hello=0x7f040000;
         public static final int new_applycants=0x7f040003;
-        public static final int tweet_created_at_beautify_day=0x7f04000c;
-        public static final int tweet_created_at_beautify_hour=0x7f04000b;
-        public static final int tweet_created_at_beautify_min=0x7f04000a;
+        public static final int omenu_about=0x7f040014;
+        public static final int omenu_exit=0x7f040015;
+        public static final int omenu_help=0x7f040016;
+        public static final int omenu_preferences=0x7f040011;
+        public static final int omenu_refresh=0x7f040010;
+        public static final int omenu_search=0x7f040013;
+        public static final int omenu_settings=0x7f040012;
+        /**  options menu 
+         */
+        public static final int omenu_signout=0x7f04000f;
+        public static final int refresh_settings=0x7f040017;
+        public static final int ten_mins=0x7f04001a;
+        public static final int tweet_created_at_beautify_day=0x7f04000d;
+        public static final int tweet_created_at_beautify_hour=0x7f04000c;
+        public static final int tweet_created_at_beautify_min=0x7f04000b;
         /**  时间 
          */
-        public static final int tweet_created_at_beautify_prefix=0x7f040008;
-        public static final int tweet_created_at_beautify_sec=0x7f040009;
-        public static final int tweet_created_at_beautify_suffix=0x7f04000d;
+        public static final int tweet_created_at_beautify_prefix=0x7f040009;
+        public static final int tweet_created_at_beautify_sec=0x7f04000a;
+        public static final int tweet_created_at_beautify_suffix=0x7f04000e;
+        public static final int two_mins=0x7f040018;
     }
 }
