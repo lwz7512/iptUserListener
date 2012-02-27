@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 import org.apache.http.message.BasicNameValuePair;
 
+import android.util.Log;
+
 import com.ybcx.ipintu.http.HttpException;
 import com.ybcx.ipintu.http.Response;
 import com.ybcx.ipintu.http.SimpleHttpClient;
 import com.ybcx.ipintu.service.ApiConsts;
-
-import android.util.Log;
 
 
 
@@ -20,10 +20,13 @@ public class SendTask extends GenericTask {
 	// 同意
 	public static final int TYPE_ACCEPT = 1;
 	public static final int TYPE_REFUSE = 0;
+	public static final int TYP_SENDMAIL =3;
+	
 	private String postResult;
 
 	private SimpleHttpClient client;
 	
+
 	@Override
 	protected void onPreExecute(){
 		super.onPreExecute();
@@ -46,26 +49,36 @@ public class SendTask extends GenericTask {
 			nvs.add(accountParam);	
 			
 			BasicNameValuePair optParam = null;
-			
+			Response resp = null;
 			switch (mode) {
 
 			case TYPE_ACCEPT:
-				optParam = new BasicNameValuePair("opt","approve");								
+				optParam = new BasicNameValuePair("opt","approve");
+				nvs.add(optParam);			
+				resp = client.post(ApiConsts.serviceUrl, nvs, null, false);
+				postResult = resp.asString().trim();
 				break;
 			
 			case TYPE_REFUSE:
-				optParam = new BasicNameValuePair("opt","refuse");				
-				break;		
+				optParam = new BasicNameValuePair("opt","refuse");	
+				nvs.add(optParam);			
+				resp = client.post(ApiConsts.serviceUrl, nvs, null, false);
+				postResult = resp.asString().trim();
+				break;	
+				
+			case 	TYP_SENDMAIL:
+				
+				Log.d(TAG, "mail sended!");
+				break;
 			}
 			
-			nvs.add(optParam);
-			
-			Response resp = client.post(ApiConsts.serviceUrl, nvs, null, false);
-			postResult = resp.asString().trim();
 			
 		} catch (HttpException e) {
 			// Log.e(TAG, e.getMessage(), e);
 			return TaskResult.IO_ERROR;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TaskResult.FAILED;
 		}
 
 		return TaskResult.OK;
@@ -88,5 +101,6 @@ public class SendTask extends GenericTask {
 		}
 
 	}
+	
 
 }

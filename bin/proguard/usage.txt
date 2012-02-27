@@ -2,6 +2,7 @@ com.ybcx.ipintu.IptUserAdapter:
     private static final java.lang.String TAG
 com.ybcx.ipintu.IptUserListenerActivity:
     private static final java.lang.String TAG
+    protected static final int OPTIONS_MENU_ID_CLEAR
     protected static final int OPTIONS_MENU_ID_PREFERENCES
     protected static final int OPTIONS_MENU_ID_ABOUT
 com.ybcx.ipintu.R
@@ -91,6 +92,7 @@ com.ybcx.ipintu.task.SendTask:
     private static final java.lang.String TAG
     public static final int TYPE_ACCEPT
     public static final int TYPE_REFUSE
+    public static final int TYP_SENDMAIL
 com.ybcx.ipintu.task.TaskAdapter:
     26:26:public void deliveryResponseJson(org.json.JSONObject)
 com.ybcx.ipintu.task.TaskListener:

@@ -76,6 +76,12 @@ public class UserCacheImpl {
 				.delete();
 	}
 	
+	public void deleteAllRecord(){
+		Log.d(TAG, "to delete all record...");
+		Query del = new Query(ptdb);
+		del.from(ApplycantsTable.TABLE_NAME).delete();
+	}
+	
 	
 	private boolean checkRecordExist(String table, String id) {
 		StringBuilder sql = new StringBuilder();

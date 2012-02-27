@@ -7,6 +7,7 @@ com.ybcx.ipintu.IptUserAdapter -> com.ybcx.ipintu.a:
     long getItemId(int) -> getItemId
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
     void refresh(java.util.List) -> a
+    void clear() -> a
 com.ybcx.ipintu.IptUserAdapter$ViewHolder -> com.ybcx.ipintu.g:
     android.widget.TextView account -> a
     android.widget.TextView applyTime -> b
@@ -33,8 +34,8 @@ com.ybcx.ipintu.IptUserListenerActivity -> com.ybcx.ipintu.IptUserListenerActivi
     void access$1(com.ybcx.ipintu.IptUserListenerActivity,com.ybcx.ipintu.db.Applycant) -> a
     void access$2(com.ybcx.ipintu.IptUserListenerActivity) -> b
     void access$3(com.ybcx.ipintu.IptUserListenerActivity,boolean) -> a
-    void access$4(com.ybcx.ipintu.IptUserListenerActivity) -> c
-    void access$5(com.ybcx.ipintu.IptUserListenerActivity,int) -> a
+    void access$5(com.ybcx.ipintu.IptUserListenerActivity) -> c
+    void access$6(com.ybcx.ipintu.IptUserListenerActivity,int) -> a
 com.ybcx.ipintu.IptUserListenerActivity$1 -> com.ybcx.ipintu.d:
     com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
@@ -96,6 +97,7 @@ com.ybcx.ipintu.db.UserCacheImpl -> com.ybcx.ipintu.b.b:
     void cacheNewApplycants(java.util.List) -> a
     java.util.List getNewApplycants() -> a
     void deleteAcceptApplycant(java.lang.String) -> a
+    void deleteAllRecord() -> b
 com.ybcx.ipintu.http.HttpAuthException -> com.ybcx.ipintu.a.a:
 com.ybcx.ipintu.http.HttpException -> com.ybcx.ipintu.a.b:
     int statusCode -> a

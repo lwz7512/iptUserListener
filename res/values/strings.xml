@@ -21,6 +21,7 @@
 	<string name="tweet_created_at_beautify_suffix">前</string>  
 	
 	<!-- options menu -->
+	<string name="omenu_clear">清除</string>
 	<string name="omenu_signout">注销</string>
 	<string name="omenu_refresh">刷新</string>
 	<string name="omenu_preferences">选项</string>

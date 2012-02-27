@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,10 +16,10 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.ybcx.ipintu.db.Applycant;
 import com.ybcx.ipintu.db.UserCacheImpl;
-import com.ybcx.ipintu.service.UserService;
 import com.ybcx.ipintu.task.GenericTask;
 import com.ybcx.ipintu.task.SendTask;
 import com.ybcx.ipintu.task.TaskAdapter;
@@ -61,13 +60,12 @@ public class IptUserListenerActivity extends Activity {
 		user_lv = (ListView) findViewById(R.id.userlist);
 		user_adptr = new IptUserAdapter(this.getApplicationContext());
 		user_lv.setAdapter(user_adptr);
-		user_lv.setOnItemClickListener(listener);
-			
 		
 //		//FIXME, just for debug...
 //		setPreferenceValue(2);
 //		UserService.schedule(getApplicationContext());
 	}
+	
 
 	public void onResume() {
 		super.onResume();
@@ -148,6 +146,9 @@ public class IptUserListenerActivity extends Activity {
 		@Override
 		public void onPostExecute(GenericTask task, TaskResult result) {
 			setProgressBarIndeterminateVisibility(false); // 执行完后使进度条隐藏
+			if(result==TaskResult.FAILED || result==TaskResult.IO_ERROR){
+				updateProgress("remote operation failed!");
+			}
 		}
 
 		public void deliverResponseString(String response) {
@@ -155,14 +156,22 @@ public class IptUserListenerActivity extends Activity {
 		}
 
 	};
+	
+	private void updateProgress(String message) {
+		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+	}
 
 	private void deleteAcceptedUser() {
-		cache.deleteAcceptApplycant(currentUser.id);
-		List<Applycant> users = cache.getNewApplycants();
-		user_adptr.refresh(users);
+		
+		if(currentUser!=null){
+			cache.deleteAcceptApplycant(currentUser.id);
+			List<Applycant> users = cache.getNewApplycants();
+			user_adptr.refresh(users);			
+		}
 	}
 
 	// ----------------- option menu definition --------------------------------
+	protected static final int OPTIONS_MENU_ID_CLEAR = 1;
 	protected static final int OPTIONS_MENU_ID_PREFERENCES = 2;
 	protected static final int OPTIONS_MENU_ID_ABOUT = 3;
 
@@ -170,10 +179,13 @@ public class IptUserListenerActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		MenuItem item;
+		
+		item = menu.add(0, OPTIONS_MENU_ID_CLEAR, 0, R.string.omenu_clear);
+		item.setIcon(android.R.drawable.ic_menu_delete);
+		
 		item = menu.add(0, OPTIONS_MENU_ID_PREFERENCES, 0,
 				R.string.omenu_settings);
 		item.setIcon(android.R.drawable.ic_menu_preferences);
-
 		return true;
 	}
 
@@ -184,9 +196,21 @@ public class IptUserListenerActivity extends Activity {
 		case OPTIONS_MENU_ID_PREFERENCES:
 			createRadioGroupPopup();
 			return true;
+		case 	OPTIONS_MENU_ID_CLEAR:
+			clearAllRecordInCache();
+			return true;
+			
 		}
 
 		return super.onOptionsItemSelected(item);
+	}
+	
+	//FIXME, CLEAR ALL RECORD FOR CONVEVIENCE...
+	//2012/02/25
+	private void clearAllRecordInCache(){
+		cache.deleteAllRecord();
+		user_adptr.clear();
+		currentUser = null;
 	}
 	
 	private void createRadioGroupPopup(){

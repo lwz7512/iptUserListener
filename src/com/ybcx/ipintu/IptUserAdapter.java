@@ -91,5 +91,9 @@ public class IptUserAdapter extends BaseAdapter {
 		this.notifyDataSetChanged();
 	}
 
+	public void clear(){
+		this.users.clear();
+		this.notifyDataSetChanged();
+	}
 
 }
