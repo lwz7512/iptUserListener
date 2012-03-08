@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.ybcx.ipintu.db.Applycant;
 import com.ybcx.ipintu.db.UserCacheImpl;
+import com.ybcx.ipintu.service.UserService;
 import com.ybcx.ipintu.task.GenericTask;
 import com.ybcx.ipintu.task.SendTask;
 import com.ybcx.ipintu.task.TaskAdapter;
@@ -60,6 +61,9 @@ public class IptUserListenerActivity extends Activity {
 		user_lv = (ListView) findViewById(R.id.userlist);
 		user_adptr = new IptUserAdapter(this.getApplicationContext());
 		user_lv.setAdapter(user_adptr);
+		//靠，啥时候忘了加点击事件了。。。。
+		//2012/03/08
+		user_lv.setOnItemClickListener(listener);
 		
 //		//FIXME, just for debug...
 //		setPreferenceValue(2);
