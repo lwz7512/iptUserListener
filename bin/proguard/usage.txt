@@ -77,7 +77,7 @@ com.ybcx.ipintu.service.BootReceiver:
     private static final java.lang.String TAG
 com.ybcx.ipintu.service.UserService:
     private static final java.lang.String TAG
-    207:213:public static void unschedule(android.content.Context)
+    210:216:public static void unschedule(android.content.Context)
 com.ybcx.ipintu.task.Feedback:
     public abstract boolean isAvailable()
     public abstract void cancel(java.lang.CharSequence)

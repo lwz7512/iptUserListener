@@ -77,6 +77,9 @@ public class UserService extends Service {
         schedule(UserService.this);        
        
         cache = new UserCacheImpl(this.getApplicationContext());
+        
+        //TODO, 写日志到SD卡，方便查看运行状态
+        
     }
     
     @Override
