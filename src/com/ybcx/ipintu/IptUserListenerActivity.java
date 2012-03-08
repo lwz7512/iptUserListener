@@ -65,7 +65,7 @@ public class IptUserListenerActivity extends Activity {
 		//2012/03/08
 		user_lv.setOnItemClickListener(listener);
 		
-//		//FIXME, just for debug...
+		//FIXME, just for debug...
 //		setPreferenceValue(2);
 //		UserService.schedule(getApplicationContext());
 	}

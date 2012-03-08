@@ -77,7 +77,8 @@ com.ybcx.ipintu.service.BootReceiver:
     private static final java.lang.String TAG
 com.ybcx.ipintu.service.UserService:
     private static final java.lang.String TAG
-    210:216:public static void unschedule(android.content.Context)
+    private static final java.lang.String LOGFILENAME
+    255:261:public static void unschedule(android.content.Context)
 com.ybcx.ipintu.task.Feedback:
     public abstract boolean isAvailable()
     public abstract void cancel(java.lang.CharSequence)
@@ -110,6 +111,9 @@ com.ybcx.ipintu.util.DateTimeHelper:
     private static final java.lang.String TAG
     72:72:public static long getNowTime()
     76:77:public static java.lang.String longTimeToDate(long)
+com.ybcx.ipintu.util.FileHelper:
+    private static final java.lang.String TAG
+    private static final java.lang.String BASE_PATH
 com.ybcx.ipintu.util.PreferenceConst
 org.acra.ACRA:
     static final java.lang.String RES_NOTIF_ICON

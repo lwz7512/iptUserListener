@@ -128,13 +128,15 @@ com.ybcx.ipintu.service.UserService -> com.ybcx.ipintu.service.UserService:
     com.ybcx.ipintu.db.UserCacheImpl cache -> d
     com.ybcx.ipintu.task.TaskListener mRetrieveTaskListener -> e
     void onCreate() -> onCreate
+    void writeLogFileToSDCard(java.lang.String) -> b
     int onStartCommand(android.content.Intent,int,int) -> onStartCommand
     void onDestroy() -> onDestroy
     void schedule(android.content.Context) -> a
     boolean isNetworkAvailable(android.content.Context) -> b
     android.os.IBinder onBind(android.content.Intent) -> onBind
-    void access$0(com.ybcx.ipintu.service.UserService,int) -> a
-    void access$1(com.ybcx.ipintu.service.UserService,java.util.List) -> a
+    void access$0$7a0eed7b(java.lang.String) -> a
+    void access$1(com.ybcx.ipintu.service.UserService,int) -> a
+    void access$2(com.ybcx.ipintu.service.UserService,java.util.List) -> a
 com.ybcx.ipintu.service.UserService$1 -> com.ybcx.ipintu.service.a:
     com.ybcx.ipintu.service.UserService this$0 -> a
     void onPostExecute$50f0fa41(com.ybcx.ipintu.task.TaskResult) -> a
@@ -199,6 +201,10 @@ com.ybcx.ipintu.task.TaskResult -> com.ybcx.ipintu.c.h:
 com.ybcx.ipintu.util.DateTimeHelper -> com.ybcx.ipintu.d.a:
     java.text.DateFormat AGO_FULL_DATE_FORMATTER -> a
     java.lang.String getRelativeTimeByFormatDate(java.lang.String,android.content.Context) -> a
+com.ybcx.ipintu.util.FileHelper -> com.ybcx.ipintu.d.b:
+    java.lang.String readFileSdcard(java.lang.String) -> a
+    int getFileLength(java.lang.String) -> b
+    void writeFileSdcard(java.lang.String,java.lang.String) -> a
 org.acra.ACRA -> org.acra.f:
     java.lang.String LOG_TAG -> a
     android.os.Bundle mCrashResources -> b

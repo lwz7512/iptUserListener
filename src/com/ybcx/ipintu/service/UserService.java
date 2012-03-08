@@ -16,6 +16,9 @@
 
 package com.ybcx.ipintu.service;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -48,11 +51,14 @@ import com.ybcx.ipintu.task.TaskAdapter;
 import com.ybcx.ipintu.task.TaskListener;
 import com.ybcx.ipintu.task.TaskParams;
 import com.ybcx.ipintu.task.TaskResult;
+import com.ybcx.ipintu.util.FileHelper;
 import com.ybcx.ipintu.util.PreferenceConst;
 
 
 public class UserService extends Service {
+	
     private static final String TAG = "UserService";
+    private static final String LOGFILENAME = "applicant_check_log.txt";
 
     private WakeLock mWakeLock;
     private NotificationManager mNotificationManager;
@@ -78,8 +84,38 @@ public class UserService extends Service {
        
         cache = new UserCacheImpl(this.getApplicationContext());
         
-        //TODO, 写日志到SD卡，方便查看运行状态
-        
+        //写日志到SD卡，方便查看运行状态
+        writeLogFileToSDCard(">>> UserService created: ");
+    }
+    
+    private void writeLogFileToSDCard(String msg){
+    	try {
+			File logdir = FileHelper.getBasePath();
+			if(logdir!=null){
+				
+				File logFile = new File(logdir, LOGFILENAME);
+				String logFilePath = logFile.getAbsolutePath();
+				
+				String now = getNowString();
+				if(!logFile.exists()){//如果不存在，新建txt文件
+					FileHelper.writeFileSdcard(logFilePath, ">>>file created at "+now);
+				}else{
+					//大于10K，重新写文件
+					if(FileHelper.getFileLength(logFilePath)>10240){
+						FileHelper.writeFileSdcard(logFilePath, msg);
+					}else{//追加文件在顶部
+						String newContent = now+": "+msg+"\n"+FileHelper.readFileSdcard(logFilePath);
+						FileHelper.writeFileSdcard(logFilePath, newContent);
+					}
+				}
+				
+			}else{
+				Log.e(TAG, "cannot write log file to SD card...");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     @Override
@@ -109,7 +145,7 @@ public class UserService extends Service {
             return;
         } else {
         	
-        	DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss z");
+        	DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
         	Log.d(TAG, "TO Retrieve new applycants at: "+df.format(new Date()));
             
         	//执行前先检查网络状况
@@ -118,8 +154,15 @@ public class UserService extends Service {
             mRetrieveTask = new RetrieveUserTask();                        
             mRetrieveTask.setListener(mRetrieveTaskListener);
             mRetrieveTask.execute(new TaskParams());
+            
+            writeLogFileToSDCard("to Retrieve new applycant...");
         }
     	
+    }
+    
+    private String getNowString(){
+    	DateFormat df = new SimpleDateFormat("MM-dd HH:mm");
+    	return df.format(new Date());
     }
 
     private TaskListener mRetrieveTaskListener = new TaskAdapter() {
@@ -142,6 +185,8 @@ public class UserService extends Service {
         @Override
         public void deliverRetrievedList(List<Object> applycants){
         	Log.i(TAG, "New applycants numer: "+applycants.size());
+        	writeLogFileToSDCard("New applycants numer: "+applycants.size());
+        	
         	//CHECK USER NUMBER...THEN SEND NOTIFICATION...
         	int num = applycants.size();
         	if(num>0){
@@ -195,7 +240,7 @@ public class UserService extends Service {
         c.set(Calendar.SECOND, 0);
         c.set(Calendar.MILLISECOND, 0);
 
-         DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss z");
+         DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
          Log.d(TAG, "Schedule, next run at " + df.format(c.getTime()));
 
          AlarmManager alarm = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
