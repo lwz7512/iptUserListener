@@ -134,7 +134,7 @@ com.ybcx.ipintu.service.UserService -> com.ybcx.ipintu.service.UserService:
     void schedule(android.content.Context) -> a
     boolean isNetworkAvailable(android.content.Context) -> b
     android.os.IBinder onBind(android.content.Intent) -> onBind
-    void access$0$7a0eed7b(java.lang.String) -> a
+    void access$0(java.lang.String) -> a
     void access$1(com.ybcx.ipintu.service.UserService,int) -> a
     void access$2(com.ybcx.ipintu.service.UserService,java.util.List) -> a
 com.ybcx.ipintu.service.UserService$1 -> com.ybcx.ipintu.service.a:

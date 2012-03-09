@@ -2574,7 +2574,7 @@ Constant Pool (count = 409):
   - String [%s cannot be created!]
   - String [%s is not a directory!]
   - String [: ]
-  - String [>>> UserService created: ]
+  - String [>>> UserService scheduled!]
   - String [>>>file created at ]
   - String [MM-dd HH:mm]
   - String [Schedule, next run at ]
@@ -2849,7 +2849,7 @@ Constant Pool (count = 409):
   + Utf8 [([Ljava/lang/Object;)Landroid/os/AsyncTask;]
   + Utf8 [: ]
   + Utf8 [<init>]
-  + Utf8 [>>> UserService created: ]
+  + Utf8 [>>> UserService scheduled!]
   + Utf8 [>>>file created at ]
   + Utf8 [Code]
   + Utf8 [I]
@@ -3017,7 +3017,7 @@ Methods (count = 11):
     Access flags: 0x1
       = public void onCreate()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 78, locals = 2, stack = 4):
+    + Code attribute instructions (code length = 73, locals = 2, stack = 4):
       [0] ldc #18
         - String [UserService]
       [2] ldc #14
@@ -3074,11 +3074,7 @@ Methods (count = 11):
         - Methodref [com/ybcx/ipintu/b/b.<init> (Landroid/content/Context;)V]
       [69] putfield #81
         - Fieldref [com/ybcx/ipintu/service/UserService.d Lcom/ybcx/ipintu/b/b;]
-      [72] ldc #10
-        - String [>>> UserService created: ]
-      [74] invokestatic #120
-        - Methodref [com/ybcx/ipintu/service/UserService.b (Ljava/lang/String;)V]
-      [77] return
+      [72] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       b(Ljava/lang/String;)V
@@ -3105,11 +3101,11 @@ Methods (count = 11):
       [24] invokespecial #125
         - Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
       [27] dup
-      [28] astore_1 v1
+      [28] astore_3 v3
       [29] invokevirtual #126
         - Methodref [java/io/File.exists ()Z]
       [32] ifne +34 (target=66)
-      [35] aload_1 v1
+      [35] aload_3 v3
       [36] invokevirtual #129
         - Methodref [java/io/File.mkdirs ()Z]
       [39] ifne +27 (target=66)
@@ -3123,7 +3119,7 @@ Methods (count = 11):
         - Class [java/lang/Object]
       [52] dup
       [53] iconst_0
-      [54] aload_1 v1
+      [54] aload_3 v3
       [55] invokevirtual #130
         - Methodref [java/io/File.toString ()Ljava/lang/String;]
       [58] aastore
@@ -3132,7 +3128,7 @@ Methods (count = 11):
       [62] invokespecial #131
         - Methodref [java/io/IOException.<init> (Ljava/lang/String;)V]
       [65] athrow
-      [66] aload_1 v1
+      [66] aload_3 v3
       [67] invokevirtual #128
         - Methodref [java/io/File.isDirectory ()Z]
       [70] ifne +27 (target=97)
@@ -3146,7 +3142,7 @@ Methods (count = 11):
         - Class [java/lang/Object]
       [83] dup
       [84] iconst_0
-      [85] aload_1 v1
+      [85] aload_3 v3
       [86] invokevirtual #130
         - Methodref [java/io/File.toString ()Ljava/lang/String;]
       [89] aastore
@@ -3155,7 +3151,7 @@ Methods (count = 11):
       [93] invokespecial #131
         - Methodref [java/io/IOException.<init> (Ljava/lang/String;)V]
       [96] athrow
-      [97] aload_1 v1
+      [97] aload_3 v3
       [98] dup
       [99] astore_1 v1
       [100] ifnull +125 (target=225)
@@ -3266,12 +3262,12 @@ Methods (count = 11):
       - Class [java/io/IOException]
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 7):
-        - [167] Var: [a:com/ybcx/ipintu/service/UserService][a:java/lang/String][a:java/io/File][a:java/io/File][a:java/lang/String][a:java/lang/String], Stack: 
+        - [167] Var: [a:java/lang/String][a:java/io/File][a:java/io/File][a:java/lang/String][a:java/lang/String], Stack: 
         - [183] Var: ..., Stack: (empty)
         - [224] Var: ..., Stack: (empty)
         - [225] Var: -3, Stack: (empty)
         - [233] Var: ..., Stack: (empty)
-        - [234] Var: [a:com/ybcx/ipintu/service/UserService][a:java/lang/String], Stack: [a:java/io/IOException]
+        - [234] Var: [a:java/lang/String], Stack: [a:java/io/IOException]
         - [237] Var: ..., Stack: (empty)
   + Method:       onStartCommand(Landroid/content/Intent;II)I
     Access flags: 0x1
@@ -3429,135 +3425,139 @@ Methods (count = 11):
     Access flags: 0x9
       = public static void a(android.content.Context)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 164, locals = 5, stack = 5):
-      [0] new #37
+    + Code attribute instructions (code length = 169, locals = 5, stack = 5):
+      [0] ldc #10
+        - String [>>> UserService scheduled!]
+      [2] invokestatic #120
+        - Methodref [com/ybcx/ipintu/service/UserService.b (Ljava/lang/String;)V]
+      [5] new #37
         - Class [android/content/Intent]
-      [3] dup
-      [4] aload_0 v0
-      [5] ldc #54
+      [8] dup
+      [9] aload_0 v0
+      [10] ldc #54
         - Class [com/ybcx/ipintu/service/UserService]
-      [7] invokespecial #96
+      [12] invokespecial #96
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-      [10] astore_1 v1
-      [11] aload_0 v0
-      [12] iconst_0
-      [13] aload_1 v1
-      [14] ldc #2
+      [15] astore_1 v1
+      [16] aload_0 v0
+      [17] iconst_0
+      [18] aload_1 v1
+      [19] ldc #2
         - Integer [268435456]
-      [16] invokestatic #89
+      [21] invokestatic #89
         - Methodref [android/app/PendingIntent.getService (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
-      [19] astore_1 v1
-      [20] new #69
+      [24] astore_1 v1
+      [25] new #69
         - Class [java/util/GregorianCalendar]
-      [23] dup
-      [24] invokespecial #151
+      [28] dup
+      [29] invokespecial #151
         - Methodref [java/util/GregorianCalendar.<init> ()V]
-      [27] dup
-      [28] astore_2 v2
-      [29] bipush 12
-      [31] invokevirtual #146
+      [32] dup
+      [33] astore_2 v2
+      [34] bipush 12
+      [36] invokevirtual #146
         - Methodref [java/util/Calendar.get (I)I]
-      [34] istore_3 v3
-      [35] aload_0 v0
-      [36] ldc #28
+      [39] istore_3 v3
+      [40] aload_0 v0
+      [41] ldc #28
         - String [refreshcfg]
-      [38] iconst_0
-      [39] invokevirtual #94
+      [43] iconst_0
+      [44] invokevirtual #94
         - Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
-      [42] ldc #27
+      [47] ldc #27
         - String [refreshInterval]
-      [44] bipush 10
-      [46] invokeinterface #152
+      [49] bipush 10
+      [51] invokeinterface #152
         - InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
-      [51] istore v4
-      [53] iload_3 v3
-      [54] iload v4
-      [56] irem
-      [57] ifle +16 (target=73)
-      [60] iload_3 v3
-      [61] iload v4
-      [63] iload_3 v3
-      [64] iload v4
-      [66] irem
-      [67] isub
-      [68] iadd
-      [69] istore_3 v3
-      [70] goto +8 (target=78)
-      [73] iload_3 v3
-      [74] iload v4
-      [76] iadd
-      [77] istore_3 v3
-      [78] aload_2 v2
-      [79] bipush 12
-      [81] iload_3 v3
-      [82] invokevirtual #149
+      [56] istore v4
+      [58] iload_3 v3
+      [59] iload v4
+      [61] irem
+      [62] ifle +16 (target=78)
+      [65] iload_3 v3
+      [66] iload v4
+      [68] iload_3 v3
+      [69] iload v4
+      [71] irem
+      [72] isub
+      [73] iadd
+      [74] istore_3 v3
+      [75] goto +8 (target=83)
+      [78] iload_3 v3
+      [79] iload v4
+      [81] iadd
+      [82] istore_3 v3
+      [83] aload_2 v2
+      [84] bipush 12
+      [86] iload_3 v3
+      [87] invokevirtual #149
         - Methodref [java/util/Calendar.set (II)V]
-      [85] aload_2 v2
-      [86] bipush 13
-      [88] iconst_0
-      [89] invokevirtual #149
+      [90] aload_2 v2
+      [91] bipush 13
+      [93] iconst_0
+      [94] invokevirtual #149
         - Methodref [java/util/Calendar.set (II)V]
-      [92] aload_2 v2
-      [93] bipush 14
-      [95] iconst_0
-      [96] invokevirtual #149
+      [97] aload_2 v2
+      [98] bipush 14
+      [100] iconst_0
+      [101] invokevirtual #149
         - Methodref [java/util/Calendar.set (II)V]
-      [99] new #65
-        - Class [java/text/SimpleDateFormat]
-      [102] dup
-      [103] ldc #30
-        - String [yyyy.MM.dd HH:mm:ss]
-      [105] invokespecial #143
-        - Methodref [java/text/SimpleDateFormat.<init> (Ljava/lang/String;)V]
-      [108] astore_3 v3
-      [109] ldc #18
-        - String [UserService]
-      [111] new #62
-        - Class [java/lang/StringBuilder]
-      [114] dup
-      [115] ldc #13
-        - String [Schedule, next run at ]
-      [117] invokespecial #137
-        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [120] aload_3 v3
-      [121] aload_2 v2
-      [122] invokevirtual #147
-        - Methodref [java/util/Calendar.getTime ()Ljava/util/Date;]
-      [125] invokevirtual #142
-        - Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
-      [128] invokevirtual #139
-        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [131] invokevirtual #140
-        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [134] invokestatic #104
-        - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [137] pop
-      [138] aload_0 v0
-      [139] ldc #19
+      [104] aload_0 v0
+      [105] ldc #19
         - String [alarm]
-      [141] invokevirtual #95
+      [107] invokevirtual #95
         - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [144] checkcast #31
+      [110] checkcast #31
         - Class [android/app/AlarmManager]
-      [147] dup
-      [148] astore_0 v0
-      [149] aload_1 v1
-      [150] invokevirtual #83
+      [113] dup
+      [114] astore_0 v0
+      [115] aload_1 v1
+      [116] invokevirtual #83
         - Methodref [android/app/AlarmManager.cancel (Landroid/app/PendingIntent;)V]
-      [153] aload_0 v0
-      [154] iconst_0
-      [155] aload_2 v2
-      [156] invokevirtual #148
+      [119] aload_0 v0
+      [120] iconst_0
+      [121] aload_2 v2
+      [122] invokevirtual #148
         - Methodref [java/util/Calendar.getTimeInMillis ()J]
-      [159] aload_1 v1
-      [160] invokevirtual #84
+      [125] aload_1 v1
+      [126] invokevirtual #84
         - Methodref [android/app/AlarmManager.set (IJLandroid/app/PendingIntent;)V]
-      [163] return
+      [129] new #65
+        - Class [java/text/SimpleDateFormat]
+      [132] dup
+      [133] ldc #30
+        - String [yyyy.MM.dd HH:mm:ss]
+      [135] invokespecial #143
+        - Methodref [java/text/SimpleDateFormat.<init> (Ljava/lang/String;)V]
+      [138] astore_0 v0
+      [139] ldc #18
+        - String [UserService]
+      [141] new #62
+        - Class [java/lang/StringBuilder]
+      [144] dup
+      [145] ldc #13
+        - String [Schedule, next run at ]
+      [147] invokespecial #137
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [150] aload_0 v0
+      [151] aload_2 v2
+      [152] invokevirtual #147
+        - Methodref [java/util/Calendar.getTime ()Ljava/util/Date;]
+      [155] invokevirtual #142
+        - Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
+      [158] invokevirtual #139
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [161] invokevirtual #140
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [164] invokestatic #104
+        - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+      [167] pop
+      [168] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 2):
-        - [73] Var: [a:android/content/Context][a:android/content/Intent][a:android/app/PendingIntent][a:java/util/Calendar][i][a:android/content/SharedPreferences][i], Stack: 
-        - [78] Var: ..., Stack: (empty)
+        - [78] Var: [a:android/content/Context][a:android/content/Intent][a:android/app/PendingIntent][a:java/util/Calendar][i][a:android/content/SharedPreferences][i], Stack: 
+        - [83] Var: ..., Stack: (empty)
   + Method:       b(Landroid/content/Context;)Z
     Access flags: 0xa
       = private static boolean b(android.content.Context)
@@ -7594,7 +7594,7 @@ Methods (count = 3):
     Access flags: 0x11
       = public final void a(com.ybcx.ipintu.c.h)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 85, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 95, locals = 2, stack = 2):
       [0] aload_1 v1
       [1] getstatic #15
         - Fieldref [com/ybcx/ipintu/c/h.a Lcom/ybcx/ipintu/c/h;]
@@ -7606,11 +7606,11 @@ Methods (count = 3):
       [11] invokestatic #20
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [14] pop
-      [15] goto +54 (target=69)
+      [15] goto +64 (target=79)
       [18] aload_1 v1
       [19] getstatic #16
         - Fieldref [com/ybcx/ipintu/c/h.b Lcom/ybcx/ipintu/c/h;]
-      [22] ifacmpne +14 (target=36)
+      [22] ifacmpne +19 (target=41)
       [25] ldc #2
         - String [UserService]
       [27] ldc #3
@@ -7618,50 +7618,58 @@ Methods (count = 3):
       [29] invokestatic #21
         - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
       [32] pop
-      [33] goto +36 (target=69)
-      [36] aload_1 v1
-      [37] getstatic #18
+      [33] ldc #3
+        - String [applycants retrieve failed!]
+      [35] invokestatic #26
+        - Methodref [com/ybcx/ipintu/service/UserService.a (Ljava/lang/String;)V]
+      [38] goto +41 (target=79)
+      [41] aload_1 v1
+      [42] getstatic #18
         - Fieldref [com/ybcx/ipintu/c/h.d Lcom/ybcx/ipintu/c/h;]
-      [40] ifacmpne +14 (target=54)
-      [43] ldc #2
+      [45] ifacmpne +19 (target=64)
+      [48] ldc #2
         - String [UserService]
-      [45] ldc #6
+      [50] ldc #6
         - String [network is ungeilivable!]
-      [47] invokestatic #21
+      [52] invokestatic #21
         - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
-      [50] pop
-      [51] goto +18 (target=69)
-      [54] aload_1 v1
-      [55] getstatic #17
+      [55] pop
+      [56] ldc #6
+        - String [network is ungeilivable!]
+      [58] invokestatic #26
+        - Methodref [com/ybcx/ipintu/service/UserService.a (Ljava/lang/String;)V]
+      [61] goto +18 (target=79)
+      [64] aload_1 v1
+      [65] getstatic #17
         - Fieldref [com/ybcx/ipintu/c/h.c Lcom/ybcx/ipintu/c/h;]
-      [58] ifacmpne +11 (target=69)
-      [61] ldc #2
+      [68] ifacmpne +11 (target=79)
+      [71] ldc #2
         - String [UserService]
-      [63] ldc #5
+      [73] ldc #5
         - String [json data parse error!]
-      [65] invokestatic #21
+      [75] invokestatic #21
         - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
-      [68] pop
-      [69] ldc #2
+      [78] pop
+      [79] ldc #2
         - String [UserService]
-      [71] ldc #7
+      [81] ldc #7
         - String [to stop UserService...]
-      [73] invokestatic #20
+      [83] invokestatic #20
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [76] pop
-      [77] aload_0 v0
-      [78] getfield #19
+      [86] pop
+      [87] aload_0 v0
+      [88] getfield #19
         - Fieldref [com/ybcx/ipintu/service/a.a Lcom/ybcx/ipintu/service/UserService;]
-      [81] invokevirtual #27
+      [91] invokevirtual #27
         - Methodref [com/ybcx/ipintu/service/UserService.stopSelf ()V]
-      [84] return
+      [94] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 4):
         - [18] Var: ..., Stack: (empty)
-        - [36] Var: ..., Stack: (empty)
-        - [54] Var: ..., Stack: (empty)
-        - [69] Var: ..., Stack: (empty)
+        - [41] Var: ..., Stack: (empty)
+        - [64] Var: ..., Stack: (empty)
+        - [79] Var: ..., Stack: (empty)
   + Method:       a(Ljava/util/List;)V
     Access flags: 0x11
       = public final void a(java.util.List)

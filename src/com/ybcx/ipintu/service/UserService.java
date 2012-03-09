@@ -82,13 +82,11 @@ public class UserService extends Service {
         //先计划下一次任务
         schedule(UserService.this);        
        
-        cache = new UserCacheImpl(this.getApplicationContext());
-        
-        //写日志到SD卡，方便查看运行状态
-        writeLogFileToSDCard(">>> UserService created: ");
+        //初始化缓存
+        cache = new UserCacheImpl(this.getApplicationContext());               
     }
     
-    private void writeLogFileToSDCard(String msg){
+    private static void writeLogFileToSDCard(String msg){
     	try {
 			File logdir = FileHelper.getBasePath();
 			if(logdir!=null){
@@ -160,7 +158,7 @@ public class UserService extends Service {
     	
     }
     
-    private String getNowString(){
+    private static String getNowString(){
     	DateFormat df = new SimpleDateFormat("MM-dd HH:mm");
     	return df.format(new Date());
     }
@@ -172,8 +170,10 @@ public class UserService extends Service {
         		Log.d(TAG, "applycants retrieved successfully...");
         	}else if(result == TaskResult.FAILED){
         		Log.e(TAG, "applycants retrieve failed!");
+        		writeLogFileToSDCard("applycants retrieve failed!");
         	}else if (result == TaskResult.IO_ERROR) {
         		Log.e(TAG, "network is ungeilivable!");
+        		writeLogFileToSDCard("network is ungeilivable!");
         	} else if (result == TaskResult.JSON_PARSE_ERROR) {
         		Log.e(TAG, "json data parse error!");
         	}
@@ -218,7 +218,9 @@ public class UserService extends Service {
     }
 
     public static void schedule(Context context) {
-    	
+    	//写日志到SD卡，方便查看运行状态
+        writeLogFileToSDCard(">>> UserService scheduled!");
+        
     	Intent intent = new Intent(context, UserService.class);
         PendingIntent pending = PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
        
@@ -240,8 +242,6 @@ public class UserService extends Service {
         c.set(Calendar.SECOND, 0);
         c.set(Calendar.MILLISECOND, 0);
 
-         DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
-         Log.d(TAG, "Schedule, next run at " + df.format(c.getTime()));
 
          AlarmManager alarm = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
          //先停止上一个任务
@@ -249,6 +249,9 @@ public class UserService extends Service {
         //计划下一个任务
          alarm.set(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pending);
         
+         DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+         Log.d(TAG, "Schedule, next run at " + df.format(c.getTime()));
+         
     }
 
     public static void unschedule(Context context) {
