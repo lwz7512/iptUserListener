@@ -3017,7 +3017,7 @@ Methods (count = 11):
     Access flags: 0x1
       = public void onCreate()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 73, locals = 2, stack = 4):
+    + Code attribute instructions (code length = 193, locals = 3, stack = 6):
       [0] ldc #18
         - String [UserService]
       [2] ldc #14
@@ -3074,7 +3074,94 @@ Methods (count = 11):
         - Methodref [com/ybcx/ipintu/b/b.<init> (Landroid/content/Context;)V]
       [69] putfield #81
         - Fieldref [com/ybcx/ipintu/service/UserService.d Lcom/ybcx/ipintu/b/b;]
-      [72] return
+      [72] aload_0 v0
+      [73] dup
+      [74] astore_1 v1
+      [75] getfield #80
+        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
+      [78] ifnull +16 (target=94)
+      [81] aload_1 v1
+      [82] getfield #80
+        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
+      [85] invokevirtual #114
+        - Methodref [com/ybcx/ipintu/c/i.getStatus ()Landroid/os/AsyncTask$Status;]
+      [88] getstatic #77
+        - Fieldref [android/os/AsyncTask$Status.RUNNING Landroid/os/AsyncTask$Status;]
+      [91] ifacmpeq +101 (target=192)
+      [94] new #65
+        - Class [java/text/SimpleDateFormat]
+      [97] dup
+      [98] ldc #30
+        - String [yyyy.MM.dd HH:mm:ss]
+      [100] invokespecial #143
+        - Methodref [java/text/SimpleDateFormat.<init> (Ljava/lang/String;)V]
+      [103] astore_2 v2
+      [104] ldc #18
+        - String [UserService]
+      [106] new #62
+        - Class [java/lang/StringBuilder]
+      [109] dup
+      [110] ldc #17
+        - String [TO Retrieve new applycants at: ]
+      [112] invokespecial #137
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [115] aload_2 v2
+      [116] new #68
+        - Class [java/util/Date]
+      [119] dup
+      [120] invokespecial #150
+        - Methodref [java/util/Date.<init> ()V]
+      [123] invokevirtual #142
+        - Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
+      [126] invokevirtual #139
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [129] invokevirtual #140
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [132] invokestatic #104
+        - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+      [135] pop
+      [136] aload_1 v1
+      [137] invokestatic #119
+        - Methodref [com/ybcx/ipintu/service/UserService.b (Landroid/content/Context;)Z]
+      [140] ifeq +52 (target=192)
+      [143] aload_1 v1
+      [144] new #50
+        - Class [com/ybcx/ipintu/c/d]
+      [147] dup
+      [148] invokespecial #109
+        - Methodref [com/ybcx/ipintu/c/d.<init> ()V]
+      [151] putfield #80
+        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
+      [154] aload_1 v1
+      [155] getfield #80
+        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
+      [158] aload_1 v1
+      [159] getfield #82
+        - Fieldref [com/ybcx/ipintu/service/UserService.e Lcom/ybcx/ipintu/c/a;]
+      [162] invokevirtual #111
+        - Methodref [com/ybcx/ipintu/c/i.a (Lcom/ybcx/ipintu/c/a;)V]
+      [165] aload_1 v1
+      [166] getfield #80
+        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
+      [169] iconst_1
+      [170] anewarray #51
+        - Class [com/ybcx/ipintu/c/g]
+      [173] dup
+      [174] iconst_0
+      [175] new #51
+        - Class [com/ybcx/ipintu/c/g]
+      [178] dup
+      [179] invokespecial #110
+        - Methodref [com/ybcx/ipintu/c/g.<init> ()V]
+      [182] aastore
+      [183] invokevirtual #113
+        - Methodref [com/ybcx/ipintu/c/i.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
+      [186] pop
+      [187] ldc #29
+        - String [to Retrieve new applycant...]
+      [189] invokestatic #120
+        - Methodref [com/ybcx/ipintu/service/UserService.b (Ljava/lang/String;)V]
+      [192] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       b(Ljava/lang/String;)V
@@ -3273,7 +3360,7 @@ Methods (count = 11):
     Access flags: 0x1
       = public int onStartCommand(android.content.Intent,int,int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 145, locals = 6, stack = 6):
+    + Code attribute instructions (code length = 16, locals = 4, stack = 4):
       [0] ldc #18
         - String [UserService]
       [2] ldc #16
@@ -3282,99 +3369,12 @@ Methods (count = 11):
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [7] pop
       [8] aload_0 v0
-      [9] dup
-      [10] astore v4
-      [12] getfield #80
-        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
-      [15] ifnull +17 (target=32)
-      [18] aload v4
-      [20] getfield #80
-        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
-      [23] invokevirtual #114
-        - Methodref [com/ybcx/ipintu/c/i.getStatus ()Landroid/os/AsyncTask$Status;]
-      [26] getstatic #77
-        - Fieldref [android/os/AsyncTask$Status.RUNNING Landroid/os/AsyncTask$Status;]
-      [29] ifacmpeq +108 (target=137)
-      [32] new #65
-        - Class [java/text/SimpleDateFormat]
-      [35] dup
-      [36] ldc #30
-        - String [yyyy.MM.dd HH:mm:ss]
-      [38] invokespecial #143
-        - Methodref [java/text/SimpleDateFormat.<init> (Ljava/lang/String;)V]
-      [41] astore v5
-      [43] ldc #18
-        - String [UserService]
-      [45] new #62
-        - Class [java/lang/StringBuilder]
-      [48] dup
-      [49] ldc #17
-        - String [TO Retrieve new applycants at: ]
-      [51] invokespecial #137
-        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [54] aload v5
-      [56] new #68
-        - Class [java/util/Date]
-      [59] dup
-      [60] invokespecial #150
-        - Methodref [java/util/Date.<init> ()V]
-      [63] invokevirtual #142
-        - Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
-      [66] invokevirtual #139
-        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [69] invokevirtual #140
-        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [72] invokestatic #104
-        - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [75] pop
-      [76] aload v4
-      [78] invokestatic #119
-        - Methodref [com/ybcx/ipintu/service/UserService.b (Landroid/content/Context;)Z]
-      [81] ifeq +56 (target=137)
-      [84] aload v4
-      [86] new #50
-        - Class [com/ybcx/ipintu/c/d]
-      [89] dup
-      [90] invokespecial #109
-        - Methodref [com/ybcx/ipintu/c/d.<init> ()V]
-      [93] putfield #80
-        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
-      [96] aload v4
-      [98] getfield #80
-        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
-      [101] aload v4
-      [103] getfield #82
-        - Fieldref [com/ybcx/ipintu/service/UserService.e Lcom/ybcx/ipintu/c/a;]
-      [106] invokevirtual #111
-        - Methodref [com/ybcx/ipintu/c/i.a (Lcom/ybcx/ipintu/c/a;)V]
-      [109] aload v4
-      [111] getfield #80
-        - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
-      [114] iconst_1
-      [115] anewarray #51
-        - Class [com/ybcx/ipintu/c/g]
-      [118] dup
-      [119] iconst_0
-      [120] new #51
-        - Class [com/ybcx/ipintu/c/g]
-      [123] dup
-      [124] invokespecial #110
-        - Methodref [com/ybcx/ipintu/c/g.<init> ()V]
-      [127] aastore
-      [128] invokevirtual #113
-        - Methodref [com/ybcx/ipintu/c/i.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
-      [131] pop
-      [132] ldc #29
-        - String [to Retrieve new applycant...]
-      [134] invokestatic #120
-        - Methodref [com/ybcx/ipintu/service/UserService.b (Ljava/lang/String;)V]
-      [137] aload_0 v0
-      [138] aload_1 v1
-      [139] iload_2 v2
-      [140] iload_3 v3
-      [141] invokespecial #93
+      [9] aload_1 v1
+      [10] iload_2 v2
+      [11] iload_3 v3
+      [12] invokespecial #93
         - Methodref [android/app/Service.onStartCommand (Landroid/content/Intent;II)I]
-      [144] ireturn
+      [15] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onDestroy()V

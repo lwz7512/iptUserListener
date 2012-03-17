@@ -83,7 +83,11 @@ public class UserService extends Service {
         schedule(UserService.this);        
        
         //初始化缓存
-        cache = new UserCacheImpl(this.getApplicationContext());               
+        cache = new UserCacheImpl(this.getApplicationContext());    
+
+        //FIXME,放在这里执行，在 onStartCommand很奇怪有时候不执行？
+        //2012/03/17
+        requestNewUsers();
     }
     
     private static void writeLogFileToSDCard(String msg){
@@ -119,7 +123,7 @@ public class UserService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {       
         Log.d(TAG, "Start Once");
-        requestNewUsers();
+        
         return super.onStartCommand(intent, flags, startId);
     }
 
