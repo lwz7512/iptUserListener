@@ -5,6 +5,7 @@ org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode valueOf(jav
 org.apache.http.entity.mime.HttpMultipartMode: org.apache.http.entity.mime.HttpMultipartMode[] values()
 org.apache.http.entity.mime.HttpMultipartMode: org.apache.http.entity.mime.HttpMultipartMode valueOf(java.lang.String)
 org.acra.CrashReportDialog
+com.ybcx.ipintu.ViewLogFile
 com.ybcx.ipintu.IptUserListenerActivity
 com.ybcx.ipintu.service.UserService
 com.ybcx.ipintu.service.BootReceiver

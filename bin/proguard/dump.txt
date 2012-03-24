@@ -148,10 +148,10 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 138):
-  - Integer [2130903041]
-  - Integer [2131034113]
+  - Integer [2130903042]
   - Integer [2131034114]
   - Integer [2131034115]
+  - Integer [2131034116]
   - String [UserAdapter]
   - String [to parset time: ]
   - Class [android/util/Log]
@@ -375,7 +375,7 @@ Methods (count = 7):
       [5] getfield #21
         - Fieldref [com/ybcx/ipintu/a.a Landroid/view/LayoutInflater;]
       [8] ldc #1
-        - Integer [2130903041]
+        - Integer [2130903042]
       [10] aload_3 v3
       [11] iconst_0
       [12] invokevirtual #32
@@ -390,7 +390,7 @@ Methods (count = 7):
       [24] astore_3 v3
       [25] aload_2 v2
       [26] ldc #2
-        - Integer [2131034113]
+        - Integer [2131034114]
       [28] invokevirtual #33
         - Methodref [android/view/View.findViewById (I)Landroid/view/View;]
       [31] checkcast #12
@@ -400,7 +400,7 @@ Methods (count = 7):
       [37] aload_3 v3
       [38] aload_2 v2
       [39] ldc #3
-        - Integer [2131034114]
+        - Integer [2131034115]
       [41] invokevirtual #33
         - Methodref [android/view/View.findViewById (I)Landroid/view/View;]
       [44] checkcast #12
@@ -410,7 +410,7 @@ Methods (count = 7):
       [50] aload_3 v3
       [51] aload_2 v2
       [52] ldc #4
-        - Integer [2131034115]
+        - Integer [2131034116]
       [54] invokevirtual #33
         - Methodref [android/view/View.findViewById (I)Landroid/view/View;]
       [57] checkcast #12
@@ -547,23 +547,25 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 331):
+Constant Pool (count = 346):
   - Integer [17301564]
   - Integer [17301577]
+  - Integer [17301578]
   - Integer [17301659]
-  - Integer [2130903040]
-  - Integer [2130968580]
+  - Integer [2130903041]
   - Integer [2130968581]
   - Integer [2130968582]
   - Integer [2130968583]
   - Integer [2130968584]
-  - Integer [2130968591]
-  - Integer [2130968595]
-  - Integer [2130968600]
+  - Integer [2130968585]
+  - Integer [2130968592]
+  - Integer [2130968596]
   - Integer [2130968601]
   - Integer [2130968602]
   - Integer [2130968603]
-  - Integer [2131034112]
+  - Integer [2130968604]
+  - Integer [2130968605]
+  - Integer [2131034113]
   - String [IptUserListenerActivity]
   - String [account]
   - String [mode]
@@ -576,6 +578,7 @@ Constant Pool (count = 331):
   - Class [android/app/Dialog]
   - Class [android/content/DialogInterface]
   - Class [android/content/DialogInterface$OnClickListener]
+  - Class [android/content/Intent]
   - Class [android/content/SharedPreferences]
   - Class [android/content/SharedPreferences$Editor]
   - Class [android/os/AsyncTask]
@@ -587,6 +590,7 @@ Constant Pool (count = 331):
   - Class [android/widget/AdapterView$OnItemClickListener]
   - Class [android/widget/ListView]
   - Class [com/ybcx/ipintu/IptUserListenerActivity]
+  - Class [com/ybcx/ipintu/ViewLogFile]
   - Class [com/ybcx/ipintu/a]
   - Class [com/ybcx/ipintu/b]
   - Class [com/ybcx/ipintu/b/b]
@@ -633,6 +637,8 @@ Constant Pool (count = 331):
   - Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
   - Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
   - Methodref [android/app/Dialog.show ()V]
+  - Methodref [android/content/Intent.<init> ()V]
+  - Methodref [android/content/Intent.setClass (Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;]
   - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
   - Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
   - Methodref [android/widget/ListView.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
@@ -643,6 +649,7 @@ Constant Pool (count = 331):
   - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
   - Methodref [com/ybcx/ipintu/IptUserListenerActivity.requestWindowFeature (I)Z]
   - Methodref [com/ybcx/ipintu/IptUserListenerActivity.setContentView (I)V]
+  - Methodref [com/ybcx/ipintu/IptUserListenerActivity.startActivity (Landroid/content/Intent;)V]
   - Methodref [com/ybcx/ipintu/a.<init> (Landroid/content/Context;)V]
   - Methodref [com/ybcx/ipintu/a.a ()V]
   - Methodref [com/ybcx/ipintu/a.a (Ljava/util/List;)V]
@@ -724,6 +731,7 @@ Constant Pool (count = 331):
   + NameAndType [putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
   + NameAndType [requestWindowFeature (I)Z]
   + NameAndType [setAdapter (Landroid/widget/ListAdapter;)V]
+  + NameAndType [setClass (Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;]
   + NameAndType [setContentView (I)V]
   + NameAndType [setIcon (I)Landroid/app/AlertDialog$Builder;]
   + NameAndType [setIcon (I)Landroid/view/MenuItem;]
@@ -736,6 +744,7 @@ Constant Pool (count = 331):
   + NameAndType [setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
   + NameAndType [show ()Landroid/app/AlertDialog;]
   + NameAndType [show ()V]
+  + NameAndType [startActivity (Landroid/content/Intent;)V]
   + NameAndType [toString ()Ljava/lang/String;]
   + NameAndType [valueOf (I)Ljava/lang/Integer;]
   + Utf8 [()I]
@@ -756,6 +765,8 @@ Constant Pool (count = 331):
   + Utf8 [(I)Z]
   + Utf8 [(IIII)Landroid/view/MenuItem;]
   + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;]
+  + Utf8 [(Landroid/content/Intent;)V]
   + Utf8 [(Landroid/os/Bundle;)V]
   + Utf8 [(Landroid/view/Menu;)Z]
   + Utf8 [(Landroid/view/MenuItem;)Z]
@@ -806,6 +817,7 @@ Constant Pool (count = 331):
   + Utf8 [android/app/Dialog]
   + Utf8 [android/content/DialogInterface]
   + Utf8 [android/content/DialogInterface$OnClickListener]
+  + Utf8 [android/content/Intent]
   + Utf8 [android/content/SharedPreferences]
   + Utf8 [android/content/SharedPreferences$Editor]
   + Utf8 [android/os/AsyncTask]
@@ -821,6 +833,7 @@ Constant Pool (count = 331):
   + Utf8 [c]
   + Utf8 [cancel]
   + Utf8 [com/ybcx/ipintu/IptUserListenerActivity]
+  + Utf8 [com/ybcx/ipintu/ViewLogFile]
   + Utf8 [com/ybcx/ipintu/a]
   + Utf8 [com/ybcx/ipintu/b]
   + Utf8 [com/ybcx/ipintu/b/b]
@@ -867,6 +880,7 @@ Constant Pool (count = 331):
   + Utf8 [refreshcfg]
   + Utf8 [requestWindowFeature]
   + Utf8 [setAdapter]
+  + Utf8 [setClass]
   + Utf8 [setContentView]
   + Utf8 [setIcon]
   + Utf8 [setMessage]
@@ -876,6 +890,7 @@ Constant Pool (count = 331):
   + Utf8 [setSingleChoiceItems]
   + Utf8 [setTitle]
   + Utf8 [show]
+  + Utf8 [startActivity]
   + Utf8 [toString]
   + Utf8 [valueOf]
 
@@ -921,52 +936,52 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 65, locals = 1, stack = 4):
       [0] aload_0 v0
-      [1] invokespecial #69
+      [1] invokespecial #73
         - Methodref [android/app/Activity.<init> ()V]
       [4] aload_0 v0
-      [5] new #48
+      [5] new #52
         - Class [com/ybcx/ipintu/d]
       [8] dup
       [9] aload_0 v0
-      [10] invokespecial #112
+      [10] invokespecial #119
         - Methodref [com/ybcx/ipintu/d.<init> (Lcom/ybcx/ipintu/IptUserListenerActivity;)V]
-      [13] putfield #62
+      [13] putfield #66
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.g Landroid/widget/AdapterView$OnItemClickListener;]
       [16] aload_0 v0
-      [17] new #49
+      [17] new #53
         - Class [com/ybcx/ipintu/e]
       [20] dup
       [21] aload_0 v0
-      [22] invokespecial #113
+      [22] invokespecial #120
         - Methodref [com/ybcx/ipintu/e.<init> (Lcom/ybcx/ipintu/IptUserListenerActivity;)V]
-      [25] putfield #63
+      [25] putfield #67
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.h Landroid/content/DialogInterface$OnClickListener;]
       [28] aload_0 v0
-      [29] new #50
+      [29] new #54
         - Class [com/ybcx/ipintu/f]
       [32] dup
       [33] aload_0 v0
-      [34] invokespecial #114
+      [34] invokespecial #121
         - Methodref [com/ybcx/ipintu/f.<init> (Lcom/ybcx/ipintu/IptUserListenerActivity;)V]
-      [37] putfield #64
+      [37] putfield #68
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.i Landroid/content/DialogInterface$OnClickListener;]
       [40] aload_0 v0
-      [41] new #41
+      [41] new #45
         - Class [com/ybcx/ipintu/b]
       [44] dup
       [45] aload_0 v0
-      [46] invokespecial #99
+      [46] invokespecial #106
         - Methodref [com/ybcx/ipintu/b.<init> (Lcom/ybcx/ipintu/IptUserListenerActivity;)V]
-      [49] putfield #65
+      [49] putfield #69
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.j Lcom/ybcx/ipintu/c/a;]
       [52] aload_0 v0
-      [53] new #44
+      [53] new #48
         - Class [com/ybcx/ipintu/c]
       [56] dup
       [57] aload_0 v0
-      [58] invokespecial #104
+      [58] invokespecial #111
         - Methodref [com/ybcx/ipintu/c.<init> (Lcom/ybcx/ipintu/IptUserListenerActivity;)V]
-      [61] putfield #66
+      [61] putfield #70
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.k Landroid/content/DialogInterface$OnClickListener;]
       [64] return
       Code attribute exceptions (count = 0):
@@ -978,74 +993,74 @@ Methods (count = 13):
     + Code attribute instructions (code length = 94, locals = 2, stack = 4):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #70
+      [2] invokespecial #74
         - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] iconst_5
-      [7] invokevirtual #94
+      [7] invokevirtual #100
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.requestWindowFeature (I)Z]
       [10] pop
       [11] aload_0 v0
-      [12] ldc #4
-        - Integer [2130903040]
-      [14] invokevirtual #95
+      [12] ldc #5
+        - Integer [2130903041]
+      [14] invokevirtual #101
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.setContentView (I)V]
       [17] aload_0 v0
       [18] aload_0 v0
-      [19] ldc #22
+      [19] ldc #24
         - String [refreshcfg]
       [21] iconst_0
-      [22] invokevirtual #92
+      [22] invokevirtual #98
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
-      [25] putfield #61
+      [25] putfield #65
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.f Landroid/content/SharedPreferences;]
       [28] aload_0 v0
-      [29] new #42
+      [29] new #46
         - Class [com/ybcx/ipintu/b/b]
       [32] dup
       [33] aload_0 v0
-      [34] invokevirtual #91
+      [34] invokevirtual #97
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getApplicationContext ()Landroid/content/Context;]
-      [37] invokespecial #100
+      [37] invokespecial #107
         - Methodref [com/ybcx/ipintu/b/b.<init> (Landroid/content/Context;)V]
-      [40] putfield #56
+      [40] putfield #60
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.a Lcom/ybcx/ipintu/b/b;]
       [43] aload_0 v0
       [44] aload_0 v0
-      [45] ldc #16
-        - Integer [2131034112]
-      [47] invokevirtual #90
+      [45] ldc #18
+        - Integer [2131034113]
+      [47] invokevirtual #96
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.findViewById (I)Landroid/view/View;]
-      [50] checkcast #38
+      [50] checkcast #41
         - Class [android/widget/ListView]
-      [53] putfield #57
+      [53] putfield #61
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.b Landroid/widget/ListView;]
       [56] aload_0 v0
-      [57] new #40
+      [57] new #44
         - Class [com/ybcx/ipintu/a]
       [60] dup
       [61] aload_0 v0
-      [62] invokevirtual #91
+      [62] invokevirtual #97
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getApplicationContext ()Landroid/content/Context;]
-      [65] invokespecial #96
+      [65] invokespecial #103
         - Methodref [com/ybcx/ipintu/a.<init> (Landroid/content/Context;)V]
-      [68] putfield #58
+      [68] putfield #62
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.c Lcom/ybcx/ipintu/a;]
       [71] aload_0 v0
-      [72] getfield #57
+      [72] getfield #61
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.b Landroid/widget/ListView;]
       [75] aload_0 v0
-      [76] getfield #58
+      [76] getfield #62
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.c Lcom/ybcx/ipintu/a;]
-      [79] invokevirtual #87
+      [79] invokevirtual #93
         - Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [82] aload_0 v0
-      [83] getfield #57
+      [83] getfield #61
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.b Landroid/widget/ListView;]
       [86] aload_0 v0
-      [87] getfield #62
+      [87] getfield #66
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.g Landroid/widget/AdapterView$OnItemClickListener;]
-      [90] invokevirtual #88
+      [90] invokevirtual #94
         - Methodref [android/widget/ListView.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
       [93] return
       Code attribute exceptions (count = 0):
@@ -1056,19 +1071,19 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 21, locals = 2, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #74
+      [1] invokespecial #78
         - Methodref [android/app/Activity.onResume ()V]
       [4] aload_0 v0
-      [5] getfield #56
+      [5] getfield #60
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.a Lcom/ybcx/ipintu/b/b;]
-      [8] invokevirtual #101
+      [8] invokevirtual #108
         - Methodref [com/ybcx/ipintu/b/b.a ()Ljava/util/List;]
       [11] astore_1 v1
       [12] aload_0 v0
-      [13] getfield #58
+      [13] getfield #62
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.c Lcom/ybcx/ipintu/a;]
       [16] aload_1 v1
-      [17] invokevirtual #98
+      [17] invokevirtual #105
         - Methodref [com/ybcx/ipintu/a.a (Ljava/util/List;)V]
       [20] return
       Code attribute exceptions (count = 0):
@@ -1077,206 +1092,243 @@ Methods (count = 13):
     Access flags: 0x1
       = public boolean onCreateOptionsMenu(android.view.Menu)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 46, locals = 2, stack = 5):
+    + Code attribute instructions (code length = 65, locals = 2, stack = 5):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #71
+      [2] invokespecial #75
         - Methodref [android/app/Activity.onCreateOptionsMenu (Landroid/view/Menu;)Z]
       [5] pop
       [6] aload_1 v1
       [7] iconst_0
-      [8] iconst_1
+      [8] iconst_4
       [9] iconst_0
-      [10] ldc #10
-        - Integer [2130968591]
-      [12] invokeinterface #124
+      [10] ldc #13
+        - Integer [2130968601]
+      [12] invokeinterface #131
         - InterfaceMethodref [android/view/Menu.add (IIII)Landroid/view/MenuItem;]
-      [17] ldc #1
-        - Integer [17301564]
-      [19] invokeinterface #126
+      [17] ldc #3
+        - Integer [17301578]
+      [19] invokeinterface #133
         - InterfaceMethodref [android/view/MenuItem.setIcon (I)Landroid/view/MenuItem;]
       [24] pop
       [25] aload_1 v1
       [26] iconst_0
-      [27] iconst_2
+      [27] iconst_1
       [28] iconst_0
       [29] ldc #11
-        - Integer [2130968595]
-      [31] invokeinterface #124
+        - Integer [2130968592]
+      [31] invokeinterface #131
         - InterfaceMethodref [android/view/Menu.add (IIII)Landroid/view/MenuItem;]
-      [36] ldc #2
-        - Integer [17301577]
-      [38] invokeinterface #126
+      [36] ldc #1
+        - Integer [17301564]
+      [38] invokeinterface #133
         - InterfaceMethodref [android/view/MenuItem.setIcon (I)Landroid/view/MenuItem;]
       [43] pop
-      [44] iconst_1
-      [45] ireturn
+      [44] aload_1 v1
+      [45] iconst_0
+      [46] iconst_2
+      [47] iconst_0
+      [48] ldc #12
+        - Integer [2130968596]
+      [50] invokeinterface #131
+        - InterfaceMethodref [android/view/Menu.add (IIII)Landroid/view/MenuItem;]
+      [55] ldc #2
+        - Integer [17301577]
+      [57] invokeinterface #133
+        - InterfaceMethodref [android/view/MenuItem.setIcon (I)Landroid/view/MenuItem;]
+      [62] pop
+      [63] iconst_1
+      [64] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onOptionsItemSelected(Landroid/view/MenuItem;)Z
     Access flags: 0x1
       = public boolean onOptionsItemSelected(android.view.MenuItem)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 232, locals = 6, stack = 5):
+    + Code attribute instructions (code length = 265, locals = 6, stack = 5):
       [0] aload_1 v1
-      [1] invokeinterface #125
+      [1] invokeinterface #132
         - InterfaceMethodref [android/view/MenuItem.getItemId ()I]
-      [6] tableswitch (2 offsets, default=220) (target=226)
-        1: offset = 197, target = 203
-        2: offset = 22, target = 28
-        default: offset = 220, target = 226
-      [28] aload_0 v0
-      [29] dup
-      [30] astore_1 v1
-      [31] ldc #15
+      [6] tableswitch (4 offsets, default=253) (target=259)
+        1: offset = 205, target = 211
+        2: offset = 30, target = 36
+        3: offset = 253, target = 259
+        4: offset = 228, target = 234
+        default: offset = 253, target = 259
+      [36] aload_0 v0
+      [37] dup
+      [38] astore_1 v1
+      [39] ldc #17
+        - Integer [2130968605]
+      [41] invokevirtual #99
+        - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
+      [44] invokeinterface #134
+        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [49] astore_2 v2
+      [50] aload_1 v1
+      [51] ldc #16
+        - Integer [2130968604]
+      [53] invokevirtual #99
+        - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
+      [56] invokeinterface #134
+        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [61] astore_3 v3
+      [62] aload_1 v1
+      [63] ldc #15
         - Integer [2130968603]
-      [33] invokevirtual #93
+      [65] invokevirtual #99
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
-      [36] invokeinterface #127
+      [68] invokeinterface #134
         - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
-      [41] astore_2 v2
-      [42] aload_1 v1
-      [43] ldc #14
-        - Integer [2130968602]
-      [45] invokevirtual #93
-        - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
-      [48] invokeinterface #127
-        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
-      [53] astore_3 v3
-      [54] aload_1 v1
-      [55] ldc #13
-        - Integer [2130968601]
-      [57] invokevirtual #93
-        - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
-      [60] invokeinterface #127
-        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
-      [65] astore v4
-      [67] new #25
+      [73] astore v4
+      [75] new #27
         - Class [android/app/AlertDialog$Builder]
-      [70] dup
-      [71] aload_1 v1
-      [72] invokespecial #75
+      [78] dup
+      [79] aload_1 v1
+      [80] invokespecial #79
         - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
-      [75] dup
-      [76] astore v5
-      [78] ldc #12
-        - Integer [2130968600]
-      [80] invokevirtual #82
+      [83] dup
+      [84] astore v5
+      [86] ldc #14
+        - Integer [2130968602]
+      [88] invokevirtual #86
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
-      [83] pop
-      [84] aload v5
-      [86] ldc #3
-        - Integer [17301659]
-      [88] invokevirtual #77
-        - Methodref [android/app/AlertDialog$Builder.setIcon (I)Landroid/app/AlertDialog$Builder;]
       [91] pop
       [92] aload v5
-      [94] iconst_3
-      [95] anewarray #53
+      [94] ldc #4
+        - Integer [17301659]
+      [96] invokevirtual #81
+        - Methodref [android/app/AlertDialog$Builder.setIcon (I)Landroid/app/AlertDialog$Builder;]
+      [99] pop
+      [100] aload v5
+      [102] iconst_3
+      [103] anewarray #57
         - Class [java/lang/String]
-      [98] dup
-      [99] iconst_0
-      [100] aload_2 v2
-      [101] aastore
-      [102] dup
-      [103] iconst_1
-      [104] aload_3 v3
-      [105] aastore
       [106] dup
-      [107] iconst_2
-      [108] aload v4
-      [110] aastore
-      [111] aload_1 v1
-      [112] astore_2 v2
-      [113] iconst_0
-      [114] istore_3 v3
-      [115] aload_2 v2
-      [116] getfield #61
+      [107] iconst_0
+      [108] aload_2 v2
+      [109] aastore
+      [110] dup
+      [111] iconst_1
+      [112] aload_3 v3
+      [113] aastore
+      [114] dup
+      [115] iconst_2
+      [116] aload v4
+      [118] aastore
+      [119] aload_1 v1
+      [120] astore_2 v2
+      [121] iconst_0
+      [122] istore_3 v3
+      [123] aload_2 v2
+      [124] getfield #65
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.f Landroid/content/SharedPreferences;]
-      [119] ldc #21
+      [127] ldc #23
         - String [refreshInterval]
-      [121] bipush 10
-      [123] invokeinterface #121
+      [129] bipush 10
+      [131] invokeinterface #128
         - InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
-      [128] lookupswitch (3 offsets, default=48) (target=176)
-        2: offset = 46, target = 174
-        5: offset = 41, target = 169
-        10: offset = 36, target = 164
-        default: offset = 48, target = 176
-      [164] iconst_0
-      [165] istore_3 v3
-      [166] goto +10 (target=176)
-      [169] iconst_1
-      [170] istore_3 v3
-      [171] goto +5 (target=176)
-      [174] iconst_2
-      [175] istore_3 v3
-      [176] iload_3 v3
-      [177] aload_1 v1
-      [178] getfield #66
+      [136] lookupswitch (3 offsets, default=48) (target=184)
+        2: offset = 46, target = 182
+        5: offset = 41, target = 177
+        10: offset = 36, target = 172
+        default: offset = 48, target = 184
+      [172] iconst_0
+      [173] istore_3 v3
+      [174] goto +10 (target=184)
+      [177] iconst_1
+      [178] istore_3 v3
+      [179] goto +5 (target=184)
+      [182] iconst_2
+      [183] istore_3 v3
+      [184] iload_3 v3
+      [185] aload_1 v1
+      [186] getfield #70
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.k Landroid/content/DialogInterface$OnClickListener;]
-      [181] invokevirtual #81
+      [189] invokevirtual #85
         - Methodref [android/app/AlertDialog$Builder.setSingleChoiceItems ([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-      [184] pop
-      [185] aload v5
-      [187] aload_1 v1
-      [188] ldc #9
-        - Integer [2130968584]
-      [190] invokevirtual #93
+      [192] pop
+      [193] aload v5
+      [195] aload_1 v1
+      [196] ldc #10
+        - Integer [2130968585]
+      [198] invokevirtual #99
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
-      [193] aconst_null
-      [194] invokevirtual #79
+      [201] aconst_null
+      [202] invokevirtual #83
         - Methodref [android/app/AlertDialog$Builder.setNegativeButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-      [197] invokevirtual #84
+      [205] invokevirtual #88
         - Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
-      [200] pop
-      [201] iconst_1
-      [202] ireturn
-      [203] aload_0 v0
-      [204] dup
-      [205] astore_1 v1
-      [206] getfield #56
+      [208] pop
+      [209] iconst_1
+      [210] ireturn
+      [211] aload_0 v0
+      [212] dup
+      [213] astore_1 v1
+      [214] getfield #60
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.a Lcom/ybcx/ipintu/b/b;]
-      [209] invokevirtual #103
+      [217] invokevirtual #110
         - Methodref [com/ybcx/ipintu/b/b.b ()V]
-      [212] aload_1 v1
-      [213] getfield #58
+      [220] aload_1 v1
+      [221] getfield #62
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.c Lcom/ybcx/ipintu/a;]
-      [216] invokevirtual #97
+      [224] invokevirtual #104
         - Methodref [com/ybcx/ipintu/a.a ()V]
-      [219] aload_1 v1
-      [220] aconst_null
-      [221] putfield #59
-        - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.d Lcom/ybcx/ipintu/b/e;]
-      [224] iconst_1
-      [225] ireturn
-      [226] aload_0 v0
       [227] aload_1 v1
-      [228] invokespecial #73
+      [228] aconst_null
+      [229] putfield #63
+        - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.d Lcom/ybcx/ipintu/b/e;]
+      [232] iconst_1
+      [233] ireturn
+      [234] aload_0 v0
+      [235] astore_1 v1
+      [236] new #31
+        - Class [android/content/Intent]
+      [239] dup
+      [240] invokespecial #90
+        - Methodref [android/content/Intent.<init> ()V]
+      [243] dup
+      [244] astore_2 v2
+      [245] aload_1 v1
+      [246] ldc #43
+        - Class [com/ybcx/ipintu/ViewLogFile]
+      [248] invokevirtual #91
+        - Methodref [android/content/Intent.setClass (Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;]
+      [251] pop
+      [252] aload_1 v1
+      [253] aload_2 v2
+      [254] invokevirtual #102
+        - Methodref [com/ybcx/ipintu/IptUserListenerActivity.startActivity (Landroid/content/Intent;)V]
+      [257] iconst_1
+      [258] ireturn
+      [259] aload_0 v0
+      [260] aload_1 v1
+      [261] invokespecial #77
         - Methodref [android/app/Activity.onOptionsItemSelected (Landroid/view/MenuItem;)Z]
-      [231] ireturn
+      [264] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 3):
-        - [28] Var: ..., Stack: (empty)
-        - [203] Var: ..., Stack: (empty)
-        - [226] Var: ..., Stack: (empty)
+      + Stack map table attribute (count = 4):
+        - [36] Var: ..., Stack: (empty)
+        - [211] Var: ..., Stack: (empty)
+        - [234] Var: ..., Stack: (empty)
+        - [259] Var: ..., Stack: (empty)
   + Method:       a(I)V
     Access flags: 0x2
       = private void a(int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 24, locals = 2, stack = 3):
       [0] aload_0 v0
-      [1] getfield #61
+      [1] getfield #65
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.f Landroid/content/SharedPreferences;]
-      [4] invokeinterface #120
+      [4] invokeinterface #127
         - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
-      [9] ldc #21
+      [9] ldc #23
         - String [refreshInterval]
       [11] iload_1 v1
-      [12] invokeinterface #123
+      [12] invokeinterface #130
         - InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
-      [17] invokeinterface #122
+      [17] invokeinterface #129
         - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
       [22] pop
       [23] return
@@ -1287,38 +1339,38 @@ Methods (count = 13):
       = protected void onDestroy()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 47, locals = 1, stack = 2):
-      [0] ldc #17
+      [0] ldc #19
         - String [IptUserListenerActivity]
-      [2] ldc #20
+      [2] ldc #22
         - String [onDestroy.]
-      [4] invokestatic #86
+      [4] invokestatic #92
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [7] pop
       [8] aload_0 v0
-      [9] getfield #60
+      [9] getfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
       [12] ifnull +25 (target=37)
       [15] aload_0 v0
-      [16] getfield #60
+      [16] getfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
-      [19] invokevirtual #111
+      [19] invokevirtual #118
         - Methodref [com/ybcx/ipintu/c/i.getStatus ()Landroid/os/AsyncTask$Status;]
-      [22] getstatic #55
+      [22] getstatic #59
         - Fieldref [android/os/AsyncTask$Status.RUNNING Landroid/os/AsyncTask$Status;]
       [25] ifacmpne +12 (target=37)
       [28] aload_0 v0
-      [29] getfield #60
+      [29] getfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
       [32] iconst_1
-      [33] invokevirtual #109
+      [33] invokevirtual #116
         - Methodref [com/ybcx/ipintu/c/i.cancel (Z)Z]
       [36] pop
       [37] aload_0 v0
       [38] aconst_null
-      [39] putfield #60
+      [39] putfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
       [42] aload_0 v0
-      [43] invokespecial #72
+      [43] invokespecial #76
         - Methodref [android/app/Activity.onDestroy ()V]
       [46] return
       Code attribute exceptions (count = 0):
@@ -1331,7 +1383,7 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #58
+      [1] getfield #62
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.c Lcom/ybcx/ipintu/a;]
       [4] areturn
       Code attribute exceptions (count = 0):
@@ -1343,7 +1395,7 @@ Methods (count = 13):
     + Code attribute instructions (code length = 6, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #59
+      [2] putfield #63
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.d Lcom/ybcx/ipintu/b/e;]
       [5] return
       Code attribute exceptions (count = 0):
@@ -1356,90 +1408,90 @@ Methods (count = 13):
       [0] aload_0 v0
       [1] dup
       [2] astore_0 v0
-      [3] getfield #59
+      [3] getfield #63
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.d Lcom/ybcx/ipintu/b/e;]
       [6] ifnull +114 (target=120)
       [9] aload_0 v0
-      [10] getfield #60
+      [10] getfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
       [13] ifnull +16 (target=29)
       [16] aload_0 v0
-      [17] getfield #60
+      [17] getfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
-      [20] invokevirtual #111
+      [20] invokevirtual #118
         - Methodref [com/ybcx/ipintu/c/i.getStatus ()Landroid/os/AsyncTask$Status;]
-      [23] getstatic #55
+      [23] getstatic #59
         - Fieldref [android/os/AsyncTask$Status.RUNNING Landroid/os/AsyncTask$Status;]
       [26] ifacmpeq +94 (target=120)
-      [29] new #25
+      [29] new #27
         - Class [android/app/AlertDialog$Builder]
       [32] dup
       [33] aload_0 v0
-      [34] invokespecial #75
+      [34] invokespecial #79
         - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
       [37] dup
       [38] astore_1 v1
       [39] aload_0 v0
-      [40] ldc #5
-        - Integer [2130968580]
-      [42] invokevirtual #93
+      [40] ldc #6
+        - Integer [2130968581]
+      [42] invokevirtual #99
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
-      [45] invokevirtual #83
+      [45] invokevirtual #87
         - Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
       [48] pop
       [49] aload_1 v1
-      [50] new #54
+      [50] new #58
         - Class [java/lang/StringBuilder]
       [53] dup
-      [54] invokespecial #116
+      [54] invokespecial #123
         - Methodref [java/lang/StringBuilder.<init> ()V]
       [57] aload_0 v0
-      [58] ldc #6
-        - Integer [2130968581]
-      [60] invokevirtual #93
+      [58] ldc #7
+        - Integer [2130968582]
+      [60] invokevirtual #99
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
-      [63] invokevirtual #117
+      [63] invokevirtual #124
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [66] aload_0 v0
-      [67] getfield #59
+      [67] getfield #63
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.d Lcom/ybcx/ipintu/b/e;]
-      [70] getfield #68
+      [70] getfield #72
         - Fieldref [com/ybcx/ipintu/b/e.b Ljava/lang/String;]
-      [73] invokevirtual #118
+      [73] invokevirtual #125
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [76] invokevirtual #119
+      [76] invokevirtual #126
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [79] invokevirtual #78
+      [79] invokevirtual #82
         - Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
       [82] pop
       [83] aload_1 v1
       [84] aload_0 v0
-      [85] ldc #7
-        - Integer [2130968582]
-      [87] invokevirtual #93
+      [85] ldc #8
+        - Integer [2130968583]
+      [87] invokevirtual #99
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
       [90] aload_0 v0
-      [91] getfield #63
+      [91] getfield #67
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.h Landroid/content/DialogInterface$OnClickListener;]
-      [94] invokevirtual #80
+      [94] invokevirtual #84
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [97] pop
       [98] aload_1 v1
       [99] aload_0 v0
-      [100] ldc #8
-        - Integer [2130968583]
-      [102] invokevirtual #93
+      [100] ldc #9
+        - Integer [2130968584]
+      [102] invokevirtual #99
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.getText (I)Ljava/lang/CharSequence;]
       [105] aload_0 v0
-      [106] getfield #64
+      [106] getfield #68
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.i Landroid/content/DialogInterface$OnClickListener;]
-      [109] invokevirtual #79
+      [109] invokevirtual #83
         - Methodref [android/app/AlertDialog$Builder.setNegativeButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [112] pop
       [113] aload_1 v1
-      [114] invokevirtual #76
+      [114] invokevirtual #80
         - Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
-      [117] invokevirtual #85
+      [117] invokevirtual #89
         - Methodref [android/app/Dialog.show ()V]
       [120] return
       Code attribute exceptions (count = 0):
@@ -1452,79 +1504,79 @@ Methods (count = 13):
       [0] aload_0 v0
       [1] dup
       [2] astore_0 v0
-      [3] getfield #60
+      [3] getfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
       [6] ifnull +16 (target=22)
       [9] aload_0 v0
-      [10] getfield #60
+      [10] getfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
-      [13] invokevirtual #111
+      [13] invokevirtual #118
         - Methodref [com/ybcx/ipintu/c/i.getStatus ()Landroid/os/AsyncTask$Status;]
-      [16] getstatic #55
+      [16] getstatic #59
         - Fieldref [android/os/AsyncTask$Status.RUNNING Landroid/os/AsyncTask$Status;]
       [19] ifacmpeq +89 (target=108)
       [22] aload_0 v0
-      [23] new #45
+      [23] new #49
         - Class [com/ybcx/ipintu/c/c]
       [26] dup
-      [27] invokespecial #105
+      [27] invokespecial #112
         - Methodref [com/ybcx/ipintu/c/c.<init> ()V]
-      [30] putfield #60
+      [30] putfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
       [33] aload_0 v0
-      [34] getfield #60
+      [34] getfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
       [37] aload_0 v0
-      [38] getfield #65
+      [38] getfield #69
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.j Lcom/ybcx/ipintu/c/a;]
-      [41] invokevirtual #108
+      [41] invokevirtual #115
         - Methodref [com/ybcx/ipintu/c/i.a (Lcom/ybcx/ipintu/c/a;)V]
-      [44] new #46
+      [44] new #50
         - Class [com/ybcx/ipintu/c/g]
       [47] dup
-      [48] invokespecial #106
+      [48] invokespecial #113
         - Methodref [com/ybcx/ipintu/c/g.<init> ()V]
       [51] dup
       [52] astore_2 v2
-      [53] ldc #18
+      [53] ldc #20
         - String [account]
       [55] aload_0 v0
-      [56] getfield #59
+      [56] getfield #63
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.d Lcom/ybcx/ipintu/b/e;]
-      [59] getfield #68
+      [59] getfield #72
         - Fieldref [com/ybcx/ipintu/b/e.b Ljava/lang/String;]
-      [62] invokevirtual #107
+      [62] invokevirtual #114
         - Methodref [com/ybcx/ipintu/c/g.a (Ljava/lang/String;Ljava/lang/Object;)V]
       [65] iload_1 v1
       [66] ifeq +16 (target=82)
       [69] aload_2 v2
-      [70] ldc #19
+      [70] ldc #21
         - String [mode]
       [72] iconst_1
-      [73] invokestatic #115
+      [73] invokestatic #122
         - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [76] invokevirtual #107
+      [76] invokevirtual #114
         - Methodref [com/ybcx/ipintu/c/g.a (Ljava/lang/String;Ljava/lang/Object;)V]
       [79] goto +13 (target=92)
       [82] aload_2 v2
-      [83] ldc #19
+      [83] ldc #21
         - String [mode]
       [85] iconst_0
-      [86] invokestatic #115
+      [86] invokestatic #122
         - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [89] invokevirtual #107
+      [89] invokevirtual #114
         - Methodref [com/ybcx/ipintu/c/g.a (Ljava/lang/String;Ljava/lang/Object;)V]
       [92] aload_0 v0
-      [93] getfield #60
+      [93] getfield #64
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.e Lcom/ybcx/ipintu/c/i;]
       [96] iconst_1
-      [97] anewarray #46
+      [97] anewarray #50
         - Class [com/ybcx/ipintu/c/g]
       [100] dup
       [101] iconst_0
       [102] aload_2 v2
       [103] aastore
-      [104] invokevirtual #110
+      [104] invokevirtual #117
         - Methodref [com/ybcx/ipintu/c/i.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
       [107] pop
       [108] return
@@ -1538,30 +1590,30 @@ Methods (count = 13):
       [0] aload_0 v0
       [1] dup
       [2] astore_0 v0
-      [3] getfield #59
+      [3] getfield #63
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.d Lcom/ybcx/ipintu/b/e;]
       [6] ifnull +33 (target=39)
       [9] aload_0 v0
-      [10] getfield #56
+      [10] getfield #60
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.a Lcom/ybcx/ipintu/b/b;]
       [13] aload_0 v0
-      [14] getfield #59
+      [14] getfield #63
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.d Lcom/ybcx/ipintu/b/e;]
-      [17] getfield #67
+      [17] getfield #71
         - Fieldref [com/ybcx/ipintu/b/e.a Ljava/lang/String;]
-      [20] invokevirtual #102
+      [20] invokevirtual #109
         - Methodref [com/ybcx/ipintu/b/b.a (Ljava/lang/String;)V]
       [23] aload_0 v0
-      [24] getfield #56
+      [24] getfield #60
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.a Lcom/ybcx/ipintu/b/b;]
-      [27] invokevirtual #101
+      [27] invokevirtual #108
         - Methodref [com/ybcx/ipintu/b/b.a ()Ljava/util/List;]
       [30] astore_1 v1
       [31] aload_0 v0
-      [32] getfield #58
+      [32] getfield #62
         - Fieldref [com/ybcx/ipintu/IptUserListenerActivity.c Lcom/ybcx/ipintu/a;]
       [35] aload_1 v1
-      [36] invokevirtual #98
+      [36] invokevirtual #105
         - Methodref [com/ybcx/ipintu/a.a (Ljava/util/List;)V]
       [39] return
       Code attribute exceptions (count = 0):
@@ -1581,17 +1633,17 @@ Methods (count = 13):
         default: offset = 43, target = 46
       [28] aload_0 v0
       [29] bipush 10
-      [31] invokespecial #89
+      [31] invokespecial #95
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.a (I)V]
       [34] return
       [35] aload_0 v0
       [36] iconst_5
-      [37] invokespecial #89
+      [37] invokespecial #95
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.a (I)V]
       [40] return
       [41] aload_0 v0
       [42] iconst_2
-      [43] invokespecial #89
+      [43] invokespecial #95
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.a (I)V]
       [46] return
       Code attribute exceptions (count = 0):
@@ -2563,16 +2615,14 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 409):
+Constant Pool (count = 382):
   - Integer [-16729070]
   - Integer [268435456]
   - Integer [2130837504]
-  - Integer [2130968578]
   - Integer [2130968579]
+  - Integer [2130968580]
   - String [
 ]
-  - String [%s cannot be created!]
-  - String [%s is not a directory!]
   - String [: ]
   - String [>>> UserService scheduled!]
   - String [>>>file created at ]
@@ -2587,8 +2637,6 @@ Constant Pool (count = 409):
   - String [applicant_check_log.txt]
   - String [cannot write log file to SD card...]
   - String [connectivity]
-  - String [iptuser]
-  - String [mounted]
   - String [notification]
   - String [power]
   - String [refreshInterval]
@@ -2607,7 +2655,6 @@ Constant Pool (count = 409):
   - Class [android/net/NetworkInfo]
   - Class [android/os/AsyncTask]
   - Class [android/os/AsyncTask$Status]
-  - Class [android/os/Environment]
   - Class [android/os/PowerManager]
   - Class [android/os/PowerManager$WakeLock]
   - Class [android/util/Log]
@@ -2624,7 +2671,6 @@ Constant Pool (count = 409):
   - Class [java/io/IOException]
   - Class [java/lang/CharSequence]
   - Class [java/lang/Exception]
-  - Class [java/lang/Object]
   - Class [java/lang/String]
   - Class [java/lang/StringBuilder]
   - Class [java/lang/System]
@@ -2663,8 +2709,6 @@ Constant Pool (count = 409):
   - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
   - Methodref [android/net/ConnectivityManager.getActiveNetworkInfo ()Landroid/net/NetworkInfo;]
   - Methodref [android/net/NetworkInfo.isAvailable ()Z]
-  - Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-  - Methodref [android/os/Environment.getExternalStorageState ()Ljava/lang/String;]
   - Methodref [android/os/PowerManager.newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
   - Methodref [android/os/PowerManager$WakeLock.acquire ()V]
   - Methodref [android/os/PowerManager$WakeLock.release ()V]
@@ -2679,6 +2723,7 @@ Constant Pool (count = 409):
   - Methodref [com/ybcx/ipintu/c/i.cancel (Z)Z]
   - Methodref [com/ybcx/ipintu/c/i.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
   - Methodref [com/ybcx/ipintu/c/i.getStatus ()Landroid/os/AsyncTask$Status;]
+  - Methodref [com/ybcx/ipintu/d/b.a ()Ljava/io/File;]
   - Methodref [com/ybcx/ipintu/d/b.a (Ljava/lang/String;)Ljava/lang/String;]
   - Methodref [com/ybcx/ipintu/d/b.a (Ljava/lang/String;Ljava/lang/String;)V]
   - Methodref [com/ybcx/ipintu/d/b.b (Ljava/lang/String;)I]
@@ -2690,16 +2735,11 @@ Constant Pool (count = 409):
   - Methodref [com/ybcx/ipintu/service/UserService.getText (I)Ljava/lang/CharSequence;]
   - Methodref [com/ybcx/ipintu/service/a.<init> (Lcom/ybcx/ipintu/service/UserService;)V]
   - Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
+  - Methodref [java/io/File.createNewFile ()Z]
   - Methodref [java/io/File.exists ()Z]
   - Methodref [java/io/File.getAbsolutePath ()Ljava/lang/String;]
-  - Methodref [java/io/File.isDirectory ()Z]
-  - Methodref [java/io/File.mkdirs ()Z]
-  - Methodref [java/io/File.toString ()Ljava/lang/String;]
-  - Methodref [java/io/IOException.<init> (Ljava/lang/String;)V]
   - Methodref [java/io/IOException.printStackTrace ()V]
   - Methodref [java/lang/Exception.printStackTrace ()V]
-  - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-  - Methodref [java/lang/String.format (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
   - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
   - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
   - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
@@ -2729,6 +2769,7 @@ Constant Pool (count = 409):
   + NameAndType [<init> (Ljava/io/File;Ljava/lang/String;)V]
   + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [RUNNING Landroid/os/AsyncTask$Status;]
+  + NameAndType [a ()Ljava/io/File;]
   + NameAndType [a (Landroid/content/Context;)V]
   + NameAndType [a (Lcom/ybcx/ipintu/c/a;)V]
   + NameAndType [a (Ljava/lang/String;)Ljava/lang/String;]
@@ -2746,25 +2787,22 @@ Constant Pool (count = 409):
   + NameAndType [c Lcom/ybcx/ipintu/c/i;]
   + NameAndType [cancel (Landroid/app/PendingIntent;)V]
   + NameAndType [cancel (Z)Z]
+  + NameAndType [createNewFile ()Z]
   + NameAndType [currentTimeMillis ()J]
   + NameAndType [d (Ljava/lang/String;Ljava/lang/String;)I]
   + NameAndType [d Lcom/ybcx/ipintu/b/b;]
   + NameAndType [defaults I]
   + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
   + NameAndType [e Lcom/ybcx/ipintu/c/a;]
-  + NameAndType [equals (Ljava/lang/Object;)Z]
   + NameAndType [execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
   + NameAndType [exists ()Z]
   + NameAndType [flags I]
-  + NameAndType [format (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
   + NameAndType [format (Ljava/util/Date;)Ljava/lang/String;]
   + NameAndType [get (I)I]
   + NameAndType [getAbsolutePath ()Ljava/lang/String;]
   + NameAndType [getActiveNetworkInfo ()Landroid/net/NetworkInfo;]
   + NameAndType [getActivity (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
   + NameAndType [getApplicationContext ()Landroid/content/Context;]
-  + NameAndType [getExternalStorageDirectory ()Ljava/io/File;]
-  + NameAndType [getExternalStorageState ()Ljava/lang/String;]
   + NameAndType [getInt (Ljava/lang/String;I)I]
   + NameAndType [getService (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
   + NameAndType [getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
@@ -2775,12 +2813,10 @@ Constant Pool (count = 409):
   + NameAndType [getTimeInMillis ()J]
   + NameAndType [hasNext ()Z]
   + NameAndType [isAvailable ()Z]
-  + NameAndType [isDirectory ()Z]
   + NameAndType [iterator ()Ljava/util/Iterator;]
   + NameAndType [ledARGB I]
   + NameAndType [ledOffMS I]
   + NameAndType [ledOnMS I]
-  + NameAndType [mkdirs ()Z]
   + NameAndType [newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
   + NameAndType [next ()Ljava/lang/Object;]
   + NameAndType [notify (ILandroid/app/Notification;)V]
@@ -2797,8 +2833,6 @@ Constant Pool (count = 409):
   + NameAndType [valueOf (Ljava/lang/Object;)Ljava/lang/String;]
   + Utf8 [
 ]
-  + Utf8 [%s cannot be created!]
-  + Utf8 [%s is not a directory!]
   + Utf8 [()J]
   + Utf8 [()Landroid/content/Context;]
   + Utf8 [()Landroid/net/NetworkInfo;]
@@ -2842,7 +2876,6 @@ Constant Pool (count = 409):
   + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
-  + Utf8 [(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
   + Utf8 [(Ljava/util/Date;)Ljava/lang/String;]
   + Utf8 [(Ljava/util/List;)V]
   + Utf8 [(Z)Z]
@@ -2884,7 +2917,6 @@ Constant Pool (count = 409):
   + Utf8 [android/net/NetworkInfo]
   + Utf8 [android/os/AsyncTask]
   + Utf8 [android/os/AsyncTask$Status]
-  + Utf8 [android/os/Environment]
   + Utf8 [android/os/PowerManager]
   + Utf8 [android/os/PowerManager$WakeLock]
   + Utf8 [android/util/Log]
@@ -2904,11 +2936,11 @@ Constant Pool (count = 409):
   + Utf8 [com/ybcx/ipintu/service/UserService]
   + Utf8 [com/ybcx/ipintu/service/a]
   + Utf8 [connectivity]
+  + Utf8 [createNewFile]
   + Utf8 [currentTimeMillis]
   + Utf8 [d]
   + Utf8 [defaults]
   + Utf8 [e]
-  + Utf8 [equals]
   + Utf8 [execute]
   + Utf8 [exists]
   + Utf8 [flags]
@@ -2918,8 +2950,6 @@ Constant Pool (count = 409):
   + Utf8 [getActiveNetworkInfo]
   + Utf8 [getActivity]
   + Utf8 [getApplicationContext]
-  + Utf8 [getExternalStorageDirectory]
-  + Utf8 [getExternalStorageState]
   + Utf8 [getInt]
   + Utf8 [getService]
   + Utf8 [getSharedPreferences]
@@ -2929,15 +2959,12 @@ Constant Pool (count = 409):
   + Utf8 [getTime]
   + Utf8 [getTimeInMillis]
   + Utf8 [hasNext]
-  + Utf8 [iptuser]
   + Utf8 [isAvailable]
-  + Utf8 [isDirectory]
   + Utf8 [iterator]
   + Utf8 [java/io/File]
   + Utf8 [java/io/IOException]
   + Utf8 [java/lang/CharSequence]
   + Utf8 [java/lang/Exception]
-  + Utf8 [java/lang/Object]
   + Utf8 [java/lang/String]
   + Utf8 [java/lang/StringBuilder]
   + Utf8 [java/lang/System]
@@ -2952,8 +2979,6 @@ Constant Pool (count = 409):
   + Utf8 [ledARGB]
   + Utf8 [ledOffMS]
   + Utf8 [ledOnMS]
-  + Utf8 [mkdirs]
-  + Utf8 [mounted]
   + Utf8 [newWakeLock]
   + Utf8 [next]
   + Utf8 [notification]
@@ -2999,16 +3024,16 @@ Methods (count = 11):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 17, locals = 1, stack = 4):
       [0] aload_0 v0
-      [1] invokespecial #90
+      [1] invokespecial #84
         - Methodref [android/app/Service.<init> ()V]
       [4] aload_0 v0
-      [5] new #55
+      [5] new #50
         - Class [com/ybcx/ipintu/service/a]
       [8] dup
       [9] aload_0 v0
-      [10] invokespecial #124
+      [10] invokespecial #117
         - Methodref [com/ybcx/ipintu/service/a.<init> (Lcom/ybcx/ipintu/service/UserService;)V]
-      [13] putfield #82
+      [13] putfield #76
         - Fieldref [com/ybcx/ipintu/service/UserService.e Lcom/ybcx/ipintu/c/a;]
       [16] return
       Code attribute exceptions (count = 0):
@@ -3018,148 +3043,148 @@ Methods (count = 11):
       = public void onCreate()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 193, locals = 3, stack = 6):
-      [0] ldc #18
+      [0] ldc #16
         - String [UserService]
-      [2] ldc #14
+      [2] ldc #12
         - String [Server Created]
-      [4] invokestatic #106
+      [4] invokestatic #98
         - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
       [7] pop
       [8] aload_0 v0
-      [9] invokespecial #91
+      [9] invokespecial #85
         - Methodref [android/app/Service.onCreate ()V]
       [12] aload_0 v0
-      [13] ldc #26
+      [13] ldc #22
         - String [power]
-      [15] invokevirtual #122
+      [15] invokevirtual #115
         - Methodref [com/ybcx/ipintu/service/UserService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [18] checkcast #44
+      [18] checkcast #39
         - Class [android/os/PowerManager]
       [21] astore_1 v1
       [22] aload_0 v0
       [23] aload_1 v1
       [24] iconst_1
-      [25] ldc #18
+      [25] ldc #16
         - String [UserService]
-      [27] invokevirtual #101
+      [27] invokevirtual #93
         - Methodref [android/os/PowerManager.newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
-      [30] putfield #78
+      [30] putfield #72
         - Fieldref [com/ybcx/ipintu/service/UserService.a Landroid/os/PowerManager$WakeLock;]
       [33] aload_0 v0
-      [34] getfield #78
+      [34] getfield #72
         - Fieldref [com/ybcx/ipintu/service/UserService.a Landroid/os/PowerManager$WakeLock;]
-      [37] invokevirtual #102
+      [37] invokevirtual #94
         - Methodref [android/os/PowerManager$WakeLock.acquire ()V]
       [40] aload_0 v0
       [41] aload_0 v0
-      [42] ldc #25
+      [42] ldc #21
         - String [notification]
-      [44] invokevirtual #122
+      [44] invokevirtual #115
         - Methodref [com/ybcx/ipintu/service/UserService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [47] checkcast #33
+      [47] checkcast #29
         - Class [android/app/NotificationManager]
-      [50] putfield #79
+      [50] putfield #73
         - Fieldref [com/ybcx/ipintu/service/UserService.b Landroid/app/NotificationManager;]
       [53] aload_0 v0
-      [54] invokestatic #118
+      [54] invokestatic #111
         - Methodref [com/ybcx/ipintu/service/UserService.a (Landroid/content/Context;)V]
       [57] aload_0 v0
-      [58] new #48
+      [58] new #43
         - Class [com/ybcx/ipintu/b/b]
       [61] dup
       [62] aload_0 v0
-      [63] invokevirtual #121
+      [63] invokevirtual #114
         - Methodref [com/ybcx/ipintu/service/UserService.getApplicationContext ()Landroid/content/Context;]
-      [66] invokespecial #107
+      [66] invokespecial #99
         - Methodref [com/ybcx/ipintu/b/b.<init> (Landroid/content/Context;)V]
-      [69] putfield #81
+      [69] putfield #75
         - Fieldref [com/ybcx/ipintu/service/UserService.d Lcom/ybcx/ipintu/b/b;]
       [72] aload_0 v0
       [73] dup
       [74] astore_1 v1
-      [75] getfield #80
+      [75] getfield #74
         - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
       [78] ifnull +16 (target=94)
       [81] aload_1 v1
-      [82] getfield #80
+      [82] getfield #74
         - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
-      [85] invokevirtual #114
+      [85] invokevirtual #106
         - Methodref [com/ybcx/ipintu/c/i.getStatus ()Landroid/os/AsyncTask$Status;]
-      [88] getstatic #77
+      [88] getstatic #71
         - Fieldref [android/os/AsyncTask$Status.RUNNING Landroid/os/AsyncTask$Status;]
       [91] ifacmpeq +101 (target=192)
-      [94] new #65
+      [94] new #59
         - Class [java/text/SimpleDateFormat]
       [97] dup
-      [98] ldc #30
+      [98] ldc #26
         - String [yyyy.MM.dd HH:mm:ss]
-      [100] invokespecial #143
+      [100] invokespecial #131
         - Methodref [java/text/SimpleDateFormat.<init> (Ljava/lang/String;)V]
       [103] astore_2 v2
-      [104] ldc #18
+      [104] ldc #16
         - String [UserService]
-      [106] new #62
+      [106] new #56
         - Class [java/lang/StringBuilder]
       [109] dup
-      [110] ldc #17
+      [110] ldc #15
         - String [TO Retrieve new applycants at: ]
-      [112] invokespecial #137
+      [112] invokespecial #125
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [115] aload_2 v2
-      [116] new #68
+      [116] new #62
         - Class [java/util/Date]
       [119] dup
-      [120] invokespecial #150
+      [120] invokespecial #138
         - Methodref [java/util/Date.<init> ()V]
-      [123] invokevirtual #142
+      [123] invokevirtual #130
         - Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
-      [126] invokevirtual #139
+      [126] invokevirtual #127
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [129] invokevirtual #140
+      [129] invokevirtual #128
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [132] invokestatic #104
+      [132] invokestatic #96
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [135] pop
       [136] aload_1 v1
-      [137] invokestatic #119
+      [137] invokestatic #112
         - Methodref [com/ybcx/ipintu/service/UserService.b (Landroid/content/Context;)Z]
       [140] ifeq +52 (target=192)
       [143] aload_1 v1
-      [144] new #50
+      [144] new #45
         - Class [com/ybcx/ipintu/c/d]
       [147] dup
-      [148] invokespecial #109
+      [148] invokespecial #101
         - Methodref [com/ybcx/ipintu/c/d.<init> ()V]
-      [151] putfield #80
+      [151] putfield #74
         - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
       [154] aload_1 v1
-      [155] getfield #80
+      [155] getfield #74
         - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
       [158] aload_1 v1
-      [159] getfield #82
+      [159] getfield #76
         - Fieldref [com/ybcx/ipintu/service/UserService.e Lcom/ybcx/ipintu/c/a;]
-      [162] invokevirtual #111
+      [162] invokevirtual #103
         - Methodref [com/ybcx/ipintu/c/i.a (Lcom/ybcx/ipintu/c/a;)V]
       [165] aload_1 v1
-      [166] getfield #80
+      [166] getfield #74
         - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
       [169] iconst_1
-      [170] anewarray #51
+      [170] anewarray #46
         - Class [com/ybcx/ipintu/c/g]
       [173] dup
       [174] iconst_0
-      [175] new #51
+      [175] new #46
         - Class [com/ybcx/ipintu/c/g]
       [178] dup
-      [179] invokespecial #110
+      [179] invokespecial #102
         - Methodref [com/ybcx/ipintu/c/g.<init> ()V]
       [182] aastore
-      [183] invokevirtual #113
+      [183] invokevirtual #105
         - Methodref [com/ybcx/ipintu/c/i.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
       [186] pop
-      [187] ldc #29
+      [187] ldc #25
         - String [to Retrieve new applycant...]
-      [189] invokestatic #120
+      [189] invokestatic #113
         - Methodref [com/ybcx/ipintu/service/UserService.b (Ljava/lang/String;)V]
       [192] return
       Code attribute exceptions (count = 0):
@@ -3168,211 +3193,147 @@ Methods (count = 11):
     Access flags: 0xa
       = private static void b(java.lang.String)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 238, locals = 4, stack = 7):
-      [0] invokestatic #100
-        - Methodref [android/os/Environment.getExternalStorageState ()Ljava/lang/String;]
-      [3] ldc #24
-        - String [mounted]
-      [5] invokevirtual #134
-        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [8] ifne +7 (target=15)
-      [11] aconst_null
-      [12] goto +86 (target=98)
-      [15] new #56
+    + Code attribute instructions (code length = 148, locals = 4, stack = 4):
+      [0] invokestatic #107
+        - Methodref [com/ybcx/ipintu/d/b.a ()Ljava/io/File;]
+      [3] dup
+      [4] astore_1 v1
+      [5] ifnull +130 (target=135)
+      [8] new #51
         - Class [java/io/File]
-      [18] dup
-      [19] invokestatic #99
-        - Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [22] ldc #23
-        - String [iptuser]
-      [24] invokespecial #125
-        - Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
-      [27] dup
-      [28] astore_3 v3
-      [29] invokevirtual #126
-        - Methodref [java/io/File.exists ()Z]
-      [32] ifne +34 (target=66)
-      [35] aload_3 v3
-      [36] invokevirtual #129
-        - Methodref [java/io/File.mkdirs ()Z]
-      [39] ifne +27 (target=66)
-      [42] new #57
-        - Class [java/io/IOException]
-      [45] dup
-      [46] ldc #7
-        - String [%s cannot be created!]
-      [48] iconst_1
-      [49] anewarray #60
-        - Class [java/lang/Object]
-      [52] dup
-      [53] iconst_0
-      [54] aload_3 v3
-      [55] invokevirtual #130
-        - Methodref [java/io/File.toString ()Ljava/lang/String;]
-      [58] aastore
-      [59] invokestatic #135
-        - Methodref [java/lang/String.format (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
-      [62] invokespecial #131
-        - Methodref [java/io/IOException.<init> (Ljava/lang/String;)V]
-      [65] athrow
-      [66] aload_3 v3
-      [67] invokevirtual #128
-        - Methodref [java/io/File.isDirectory ()Z]
-      [70] ifne +27 (target=97)
-      [73] new #57
-        - Class [java/io/IOException]
-      [76] dup
-      [77] ldc #8
-        - String [%s is not a directory!]
-      [79] iconst_1
-      [80] anewarray #60
-        - Class [java/lang/Object]
-      [83] dup
-      [84] iconst_0
-      [85] aload_3 v3
-      [86] invokevirtual #130
-        - Methodref [java/io/File.toString ()Ljava/lang/String;]
-      [89] aastore
-      [90] invokestatic #135
-        - Methodref [java/lang/String.format (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
-      [93] invokespecial #131
-        - Methodref [java/io/IOException.<init> (Ljava/lang/String;)V]
-      [96] athrow
-      [97] aload_3 v3
-      [98] dup
-      [99] astore_1 v1
-      [100] ifnull +125 (target=225)
-      [103] new #56
-        - Class [java/io/File]
-      [106] dup
-      [107] aload_1 v1
-      [108] ldc #20
+      [11] dup
+      [12] aload_1 v1
+      [13] ldc #18
         - String [applicant_check_log.txt]
-      [110] invokespecial #125
+      [15] invokespecial #118
         - Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
-      [113] dup
-      [114] astore_1 v1
-      [115] invokevirtual #127
+      [18] dup
+      [19] astore_1 v1
+      [20] invokevirtual #121
         - Methodref [java/io/File.getAbsolutePath ()Ljava/lang/String;]
-      [118] astore_2 v2
-      [119] new #65
+      [23] astore_2 v2
+      [24] new #59
         - Class [java/text/SimpleDateFormat]
-      [122] dup
-      [123] ldc #12
+      [27] dup
+      [28] ldc #10
         - String [MM-dd HH:mm]
-      [125] invokespecial #143
+      [30] invokespecial #131
         - Methodref [java/text/SimpleDateFormat.<init> (Ljava/lang/String;)V]
-      [128] new #68
+      [33] new #62
         - Class [java/util/Date]
-      [131] dup
-      [132] invokespecial #150
+      [36] dup
+      [37] invokespecial #138
         - Methodref [java/util/Date.<init> ()V]
-      [135] invokevirtual #142
+      [40] invokevirtual #130
         - Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
-      [138] astore_3 v3
-      [139] aload_1 v1
-      [140] invokevirtual #126
+      [43] astore_3 v3
+      [44] aload_1 v1
+      [45] invokevirtual #120
         - Methodref [java/io/File.exists ()Z]
-      [143] ifne +24 (target=167)
-      [146] aload_2 v2
-      [147] new #62
+      [48] ifne +29 (target=77)
+      [51] aload_1 v1
+      [52] invokevirtual #119
+        - Methodref [java/io/File.createNewFile ()Z]
+      [55] pop
+      [56] aload_2 v2
+      [57] new #56
         - Class [java/lang/StringBuilder]
-      [150] dup
-      [151] ldc #11
+      [60] dup
+      [61] ldc #9
         - String [>>>file created at ]
-      [153] invokespecial #137
+      [63] invokespecial #125
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [156] aload_3 v3
-      [157] invokevirtual #139
+      [66] aload_3 v3
+      [67] invokevirtual #127
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [160] invokevirtual #140
+      [70] invokevirtual #128
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [163] invokestatic #116
+      [73] invokestatic #109
         - Methodref [com/ybcx/ipintu/d/b.a (Ljava/lang/String;Ljava/lang/String;)V]
-      [166] return
-      [167] aload_2 v2
-      [168] invokestatic #117
+      [76] return
+      [77] aload_2 v2
+      [78] invokestatic #110
         - Methodref [com/ybcx/ipintu/d/b.b (Ljava/lang/String;)I]
-      [171] sipush 10240
-      [174] ificmple +9 (target=183)
-      [177] aload_2 v2
-      [178] aload_0 v0
-      [179] invokestatic #116
+      [81] sipush 10240
+      [84] ificmple +9 (target=93)
+      [87] aload_2 v2
+      [88] aload_0 v0
+      [89] invokestatic #109
         - Methodref [com/ybcx/ipintu/d/b.a (Ljava/lang/String;Ljava/lang/String;)V]
-      [182] return
-      [183] new #62
+      [92] return
+      [93] new #56
         - Class [java/lang/StringBuilder]
-      [186] dup
-      [187] aload_3 v3
-      [188] invokestatic #136
+      [96] dup
+      [97] aload_3 v3
+      [98] invokestatic #124
         - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [191] invokespecial #137
+      [101] invokespecial #125
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [194] ldc #9
+      [104] ldc #7
         - String [: ]
-      [196] invokevirtual #139
+      [106] invokevirtual #127
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [199] aload_0 v0
-      [200] invokevirtual #139
+      [109] aload_0 v0
+      [110] invokevirtual #127
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [203] ldc #6
+      [113] ldc #6
         - String [
 ]
-      [205] invokevirtual #139
+      [115] invokevirtual #127
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [208] aload_2 v2
-      [209] invokestatic #115
+      [118] aload_2 v2
+      [119] invokestatic #108
         - Methodref [com/ybcx/ipintu/d/b.a (Ljava/lang/String;)Ljava/lang/String;]
-      [212] invokevirtual #139
+      [122] invokevirtual #127
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [215] invokevirtual #140
+      [125] invokevirtual #128
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [218] astore_0 v0
-      [219] aload_2 v2
-      [220] aload_0 v0
-      [221] invokestatic #116
+      [128] astore_0 v0
+      [129] aload_2 v2
+      [130] aload_0 v0
+      [131] invokestatic #109
         - Methodref [com/ybcx/ipintu/d/b.a (Ljava/lang/String;Ljava/lang/String;)V]
-      [224] return
-      [225] ldc #18
+      [134] return
+      [135] ldc #16
         - String [UserService]
-      [227] ldc #21
+      [137] ldc #19
         - String [cannot write log file to SD card...]
-      [229] invokestatic #105
+      [139] invokestatic #97
         - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
-      [232] pop
-      [233] return
-      [234] invokevirtual #132
+      [142] pop
+      [143] return
+      [144] invokevirtual #122
         - Methodref [java/io/IOException.printStackTrace ()V]
-      [237] return
+      [147] return
       Code attribute exceptions (count = 1):
-      - ExceptionInfo (0 -> 233: 234):
+      - ExceptionInfo (0 -> 143: 144):
       - Class [java/io/IOException]
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 7):
-        - [167] Var: [a:java/lang/String][a:java/io/File][a:java/io/File][a:java/lang/String][a:java/lang/String], Stack: 
-        - [183] Var: ..., Stack: (empty)
-        - [224] Var: ..., Stack: (empty)
-        - [225] Var: -3, Stack: (empty)
-        - [233] Var: ..., Stack: (empty)
-        - [234] Var: [a:java/lang/String], Stack: [a:java/io/IOException]
-        - [237] Var: ..., Stack: (empty)
+        - [77] Var: [a:java/lang/String][a:java/io/File][a:java/io/File][a:java/lang/String][a:java/lang/String], Stack: 
+        - [93] Var: ..., Stack: (empty)
+        - [134] Var: ..., Stack: (empty)
+        - [135] Var: -3, Stack: (empty)
+        - [143] Var: ..., Stack: (empty)
+        - [144] Var: [a:java/lang/String], Stack: [a:java/io/IOException]
+        - [147] Var: ..., Stack: (empty)
   + Method:       onStartCommand(Landroid/content/Intent;II)I
     Access flags: 0x1
       = public int onStartCommand(android.content.Intent,int,int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 16, locals = 4, stack = 4):
-      [0] ldc #18
+      [0] ldc #16
         - String [UserService]
-      [2] ldc #16
+      [2] ldc #14
         - String [Start Once]
-      [4] invokestatic #104
+      [4] invokestatic #96
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [7] pop
       [8] aload_0 v0
       [9] aload_1 v1
       [10] iload_2 v2
       [11] iload_3 v3
-      [12] invokespecial #93
+      [12] invokespecial #87
         - Methodref [android/app/Service.onStartCommand (Landroid/content/Intent;II)I]
       [15] ireturn
       Code attribute exceptions (count = 0):
@@ -3382,39 +3343,39 @@ Methods (count = 11):
       = public void onDestroy()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 49, locals = 1, stack = 2):
-      [0] ldc #18
+      [0] ldc #16
         - String [UserService]
-      [2] ldc #15
+      [2] ldc #13
         - String [Service Destroyed!.]
-      [4] invokestatic #104
+      [4] invokestatic #96
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [7] pop
       [8] aload_0 v0
-      [9] getfield #80
+      [9] getfield #74
         - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
       [12] ifnull +25 (target=37)
       [15] aload_0 v0
-      [16] getfield #80
+      [16] getfield #74
         - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
-      [19] invokevirtual #114
+      [19] invokevirtual #106
         - Methodref [com/ybcx/ipintu/c/i.getStatus ()Landroid/os/AsyncTask$Status;]
-      [22] getstatic #77
+      [22] getstatic #71
         - Fieldref [android/os/AsyncTask$Status.RUNNING Landroid/os/AsyncTask$Status;]
       [25] ifacmpne +12 (target=37)
       [28] aload_0 v0
-      [29] getfield #80
+      [29] getfield #74
         - Fieldref [com/ybcx/ipintu/service/UserService.c Lcom/ybcx/ipintu/c/i;]
       [32] iconst_1
-      [33] invokevirtual #112
+      [33] invokevirtual #104
         - Methodref [com/ybcx/ipintu/c/i.cancel (Z)Z]
       [36] pop
       [37] aload_0 v0
-      [38] getfield #78
+      [38] getfield #72
         - Fieldref [com/ybcx/ipintu/service/UserService.a Landroid/os/PowerManager$WakeLock;]
-      [41] invokevirtual #103
+      [41] invokevirtual #95
         - Methodref [android/os/PowerManager$WakeLock.release ()V]
       [44] aload_0 v0
-      [45] invokespecial #92
+      [45] invokespecial #86
         - Methodref [android/app/Service.onDestroy ()V]
       [48] return
       Code attribute exceptions (count = 0):
@@ -3426,17 +3387,17 @@ Methods (count = 11):
       = public static void a(android.content.Context)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 169, locals = 5, stack = 5):
-      [0] ldc #10
+      [0] ldc #8
         - String [>>> UserService scheduled!]
-      [2] invokestatic #120
+      [2] invokestatic #113
         - Methodref [com/ybcx/ipintu/service/UserService.b (Ljava/lang/String;)V]
-      [5] new #37
+      [5] new #33
         - Class [android/content/Intent]
       [8] dup
       [9] aload_0 v0
-      [10] ldc #54
+      [10] ldc #49
         - Class [com/ybcx/ipintu/service/UserService]
-      [12] invokespecial #96
+      [12] invokespecial #90
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [15] astore_1 v1
       [16] aload_0 v0
@@ -3444,30 +3405,30 @@ Methods (count = 11):
       [18] aload_1 v1
       [19] ldc #2
         - Integer [268435456]
-      [21] invokestatic #89
+      [21] invokestatic #83
         - Methodref [android/app/PendingIntent.getService (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
       [24] astore_1 v1
-      [25] new #69
+      [25] new #63
         - Class [java/util/GregorianCalendar]
       [28] dup
-      [29] invokespecial #151
+      [29] invokespecial #139
         - Methodref [java/util/GregorianCalendar.<init> ()V]
       [32] dup
       [33] astore_2 v2
       [34] bipush 12
-      [36] invokevirtual #146
+      [36] invokevirtual #134
         - Methodref [java/util/Calendar.get (I)I]
       [39] istore_3 v3
       [40] aload_0 v0
-      [41] ldc #28
+      [41] ldc #24
         - String [refreshcfg]
       [43] iconst_0
-      [44] invokevirtual #94
+      [44] invokevirtual #88
         - Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
-      [47] ldc #27
+      [47] ldc #23
         - String [refreshInterval]
       [49] bipush 10
-      [51] invokeinterface #152
+      [51] invokeinterface #140
         - InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
       [56] istore v4
       [58] iload_3 v3
@@ -3490,66 +3451,66 @@ Methods (count = 11):
       [83] aload_2 v2
       [84] bipush 12
       [86] iload_3 v3
-      [87] invokevirtual #149
+      [87] invokevirtual #137
         - Methodref [java/util/Calendar.set (II)V]
       [90] aload_2 v2
       [91] bipush 13
       [93] iconst_0
-      [94] invokevirtual #149
+      [94] invokevirtual #137
         - Methodref [java/util/Calendar.set (II)V]
       [97] aload_2 v2
       [98] bipush 14
       [100] iconst_0
-      [101] invokevirtual #149
+      [101] invokevirtual #137
         - Methodref [java/util/Calendar.set (II)V]
       [104] aload_0 v0
-      [105] ldc #19
+      [105] ldc #17
         - String [alarm]
-      [107] invokevirtual #95
+      [107] invokevirtual #89
         - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [110] checkcast #31
+      [110] checkcast #27
         - Class [android/app/AlarmManager]
       [113] dup
       [114] astore_0 v0
       [115] aload_1 v1
-      [116] invokevirtual #83
+      [116] invokevirtual #77
         - Methodref [android/app/AlarmManager.cancel (Landroid/app/PendingIntent;)V]
       [119] aload_0 v0
       [120] iconst_0
       [121] aload_2 v2
-      [122] invokevirtual #148
+      [122] invokevirtual #136
         - Methodref [java/util/Calendar.getTimeInMillis ()J]
       [125] aload_1 v1
-      [126] invokevirtual #84
+      [126] invokevirtual #78
         - Methodref [android/app/AlarmManager.set (IJLandroid/app/PendingIntent;)V]
-      [129] new #65
+      [129] new #59
         - Class [java/text/SimpleDateFormat]
       [132] dup
-      [133] ldc #30
+      [133] ldc #26
         - String [yyyy.MM.dd HH:mm:ss]
-      [135] invokespecial #143
+      [135] invokespecial #131
         - Methodref [java/text/SimpleDateFormat.<init> (Ljava/lang/String;)V]
       [138] astore_0 v0
-      [139] ldc #18
+      [139] ldc #16
         - String [UserService]
-      [141] new #62
+      [141] new #56
         - Class [java/lang/StringBuilder]
       [144] dup
-      [145] ldc #13
+      [145] ldc #11
         - String [Schedule, next run at ]
-      [147] invokespecial #137
+      [147] invokespecial #125
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [150] aload_0 v0
       [151] aload_2 v2
-      [152] invokevirtual #147
+      [152] invokevirtual #135
         - Methodref [java/util/Calendar.getTime ()Ljava/util/Date;]
-      [155] invokevirtual #142
+      [155] invokevirtual #130
         - Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
-      [158] invokevirtual #139
+      [158] invokevirtual #127
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [161] invokevirtual #140
+      [161] invokevirtual #128
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [164] invokestatic #104
+      [164] invokestatic #96
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [167] pop
       [168] return
@@ -3566,11 +3527,11 @@ Methods (count = 11):
       [0] iconst_0
       [1] istore_1 v1
       [2] aload_0 v0
-      [3] ldc #22
+      [3] ldc #20
         - String [connectivity]
-      [5] invokevirtual #95
+      [5] invokevirtual #89
         - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [8] checkcast #39
+      [8] checkcast #35
         - Class [android/net/ConnectivityManager]
       [11] dup
       [12] astore_0 v0
@@ -3579,13 +3540,13 @@ Methods (count = 11):
       [17] istore_1 v1
       [18] goto +17 (target=35)
       [21] aload_0 v0
-      [22] invokevirtual #97
+      [22] invokevirtual #91
         - Methodref [android/net/ConnectivityManager.getActiveNetworkInfo ()Landroid/net/NetworkInfo;]
-      [25] invokevirtual #98
+      [25] invokevirtual #92
         - Methodref [android/net/NetworkInfo.isAvailable ()Z]
       [28] istore_1 v1
       [29] goto +6 (target=35)
-      [32] invokevirtual #133
+      [32] invokevirtual #123
         - Methodref [java/lang/Exception.printStackTrace ()V]
       [35] iload_1 v1
       [36] ireturn
@@ -3613,7 +3574,7 @@ Methods (count = 11):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokestatic #120
+      [1] invokestatic #113
         - Methodref [com/ybcx/ipintu/service/UserService.b (Ljava/lang/String;)V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -3625,48 +3586,48 @@ Methods (count = 11):
     + Code attribute instructions (code length = 143, locals = 5, stack = 6):
       [0] aload_0 v0
       [1] astore_0 v0
-      [2] new #37
+      [2] new #33
         - Class [android/content/Intent]
       [5] dup
       [6] aload_0 v0
-      [7] ldc #47
+      [7] ldc #42
         - Class [com/ybcx/ipintu/IptUserListenerActivity]
-      [9] invokespecial #96
+      [9] invokespecial #90
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [12] astore_2 v2
       [13] aload_0 v0
       [14] iconst_0
       [15] aload_2 v2
       [16] iconst_0
-      [17] invokestatic #88
+      [17] invokestatic #82
         - Methodref [android/app/PendingIntent.getActivity (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
       [20] astore_2 v2
       [21] aload_0 v0
       [22] ldc #4
-        - Integer [2130968578]
-      [24] invokevirtual #123
+        - Integer [2130968579]
+      [24] invokevirtual #116
         - Methodref [com/ybcx/ipintu/service/UserService.getText (I)Ljava/lang/CharSequence;]
-      [27] invokeinterface #153
+      [27] invokeinterface #141
         - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
       [32] astore_3 v3
-      [33] new #62
+      [33] new #56
         - Class [java/lang/StringBuilder]
       [36] dup
       [37] aload_0 v0
       [38] ldc #5
-        - Integer [2130968579]
-      [40] invokevirtual #123
+        - Integer [2130968580]
+      [40] invokevirtual #116
         - Methodref [com/ybcx/ipintu/service/UserService.getText (I)Ljava/lang/CharSequence;]
-      [43] invokeinterface #153
+      [43] invokeinterface #141
         - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
-      [48] invokestatic #136
+      [48] invokestatic #124
         - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [51] invokespecial #137
+      [51] invokespecial #125
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [54] iload_1 v1
-      [55] invokevirtual #138
+      [55] invokevirtual #126
         - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [58] invokevirtual #140
+      [58] invokevirtual #128
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [61] astore_1 v1
       [62] aload_0 v0
@@ -3679,15 +3640,15 @@ Methods (count = 11):
       [70] astore_2 v2
       [71] astore_1 v1
       [72] astore_0 v0
-      [73] new #32
+      [73] new #28
         - Class [android/app/Notification]
       [76] dup
       [77] ldc #3
         - Integer [2130837504]
       [79] aload_2 v2
-      [80] invokestatic #141
+      [80] invokestatic #129
         - Methodref [java/lang/System.currentTimeMillis ()J]
-      [83] invokespecial #85
+      [83] invokespecial #79
         - Methodref [android/app/Notification.<init> (ILjava/lang/CharSequence;J)V]
       [86] dup
       [87] astore_2 v2
@@ -3695,40 +3656,40 @@ Methods (count = 11):
       [89] aload_3 v3
       [90] aload v4
       [92] aload_1 v1
-      [93] invokevirtual #86
+      [93] invokevirtual #80
         - Methodref [android/app/Notification.setLatestEventInfo (Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V]
       [96] aload_2 v2
       [97] bipush 25
-      [99] putfield #73
+      [99] putfield #67
         - Fieldref [android/app/Notification.flags I]
       [102] aload_2 v2
       [103] ldc #1
         - Integer [-16729070]
-      [105] putfield #74
+      [105] putfield #68
         - Fieldref [android/app/Notification.ledARGB I]
       [108] aload_2 v2
       [109] sipush 5000
-      [112] putfield #76
+      [112] putfield #70
         - Fieldref [android/app/Notification.ledOnMS I]
       [115] aload_2 v2
       [116] sipush 5000
-      [119] putfield #75
+      [119] putfield #69
         - Fieldref [android/app/Notification.ledOffMS I]
       [122] aload_2 v2
       [123] dup
-      [124] getfield #72
+      [124] getfield #66
         - Fieldref [android/app/Notification.defaults I]
       [127] iconst_1
       [128] ior
-      [129] putfield #72
+      [129] putfield #66
         - Fieldref [android/app/Notification.defaults I]
       [132] aload_0 v0
-      [133] getfield #79
+      [133] getfield #73
         - Fieldref [com/ybcx/ipintu/service/UserService.b Landroid/app/NotificationManager;]
       [136] ldc #5
-        - Integer [2130968579]
+        - Integer [2130968580]
       [138] aload_2 v2
-      [139] invokevirtual #87
+      [139] invokevirtual #81
         - Methodref [android/app/NotificationManager.notify (ILandroid/app/Notification;)V]
       [142] return
       Code attribute exceptions (count = 0):
@@ -3742,37 +3703,37 @@ Methods (count = 11):
       [1] aload_1 v1
       [2] astore_1 v1
       [3] astore_0 v0
-      [4] new #66
+      [4] new #60
         - Class [java/util/ArrayList]
       [7] dup
-      [8] invokespecial #144
+      [8] invokespecial #132
         - Methodref [java/util/ArrayList.<init> ()V]
       [11] astore_2 v2
       [12] aload_1 v1
-      [13] invokeinterface #156
+      [13] invokeinterface #144
         - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
       [18] astore_3 v3
       [19] goto +19 (target=38)
       [22] aload_3 v3
-      [23] invokeinterface #155
+      [23] invokeinterface #143
         - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
       [28] astore_1 v1
       [29] aload_2 v2
       [30] aload_1 v1
-      [31] checkcast #49
+      [31] checkcast #44
         - Class [com/ybcx/ipintu/b/e]
-      [34] invokevirtual #145
+      [34] invokevirtual #133
         - Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
       [37] pop
       [38] aload_3 v3
-      [39] invokeinterface #154
+      [39] invokeinterface #142
         - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
       [44] ifne -22 (target=22)
       [47] aload_0 v0
-      [48] getfield #81
+      [48] getfield #75
         - Fieldref [com/ybcx/ipintu/service/UserService.d Lcom/ybcx/ipintu/b/b;]
       [51] aload_2 v2
-      [52] invokevirtual #108
+      [52] invokevirtual #100
         - Methodref [com/ybcx/ipintu/b/b.a (Ljava/util/List;)V]
       [55] return
       Code attribute exceptions (count = 0):
@@ -3856,11 +3817,11 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 72):
-  - Integer [2130968586]
   - Integer [2130968587]
   - Integer [2130968588]
   - Integer [2130968589]
   - Integer [2130968590]
+  - Integer [2130968591]
   - String [yyyy-MM-dd HH:mm:ss]
   - Class [android/content/Context]
   - Class [com/ybcx/ipintu/d/a]
@@ -3980,31 +3941,31 @@ Methods (count = 3):
       [17] astore_2 v2
       [18] aload_1 v1
       [19] ldc #1
-        - Integer [2130968586]
+        - Integer [2130968587]
       [21] invokevirtual #23
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [24] astore_3 v3
       [25] aload_1 v1
       [26] ldc #2
-        - Integer [2130968587]
+        - Integer [2130968588]
       [28] invokevirtual #23
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [31] astore v4
       [33] aload_1 v1
       [34] ldc #3
-        - Integer [2130968588]
+        - Integer [2130968589]
       [36] invokevirtual #23
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [39] astore v5
       [41] aload_1 v1
       [42] ldc #4
-        - Integer [2130968589]
+        - Integer [2130968590]
       [44] invokevirtual #23
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [47] astore v6
       [49] aload_1 v1
       [50] ldc #5
-        - Integer [2130968590]
+        - Integer [2130968591]
       [52] invokevirtual #23
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [55] astore_1 v1
@@ -13060,6 +13021,374 @@ Methods (count = 4):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
++ Program class: com/ybcx/ipintu/d/b
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x31
+    = public final class com.ybcx.ipintu.d.b extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 108):
+  - String [%s cannot be created!]
+  - String [%s is not a directory!]
+  - String [iptuser]
+  - String [mounted]
+  - Class [[B]
+  - Class [android/os/Environment]
+  - Class [com/ybcx/ipintu/d/b]
+  - Class [java/io/ByteArrayOutputStream]
+  - Class [java/io/File]
+  - Class [java/io/FileInputStream]
+  - Class [java/io/FileOutputStream]
+  - Class [java/io/IOException]
+  - Class [java/lang/Exception]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
+  - Methodref [android/os/Environment.getExternalStorageState ()Ljava/lang/String;]
+  - Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+  - Methodref [java/io/ByteArrayOutputStream.close ()V]
+  - Methodref [java/io/ByteArrayOutputStream.toByteArray ()[B]
+  - Methodref [java/io/ByteArrayOutputStream.write ([BII)V]
+  - Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
+  - Methodref [java/io/File.exists ()Z]
+  - Methodref [java/io/File.isDirectory ()Z]
+  - Methodref [java/io/File.mkdirs ()Z]
+  - Methodref [java/io/File.toString ()Ljava/lang/String;]
+  - Methodref [java/io/FileInputStream.<init> (Ljava/lang/String;)V]
+  - Methodref [java/io/FileInputStream.close ()V]
+  - Methodref [java/io/FileInputStream.read ([B)I]
+  - Methodref [java/io/FileOutputStream.<init> (Ljava/lang/String;)V]
+  - Methodref [java/io/FileOutputStream.close ()V]
+  - Methodref [java/io/FileOutputStream.write ([B)V]
+  - Methodref [java/io/IOException.<init> (Ljava/lang/String;)V]
+  - Methodref [java/lang/Exception.printStackTrace ()V]
+  - Methodref [java/lang/Object.<init> ()V]
+  - Methodref [java/lang/String.<init> ([B)V]
+  - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+  - Methodref [java/lang/String.format (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+  - Methodref [java/lang/String.getBytes ()[B]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/io/File;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> ([B)V]
+  + NameAndType [close ()V]
+  + NameAndType [equals (Ljava/lang/Object;)Z]
+  + NameAndType [exists ()Z]
+  + NameAndType [format (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+  + NameAndType [getBytes ()[B]
+  + NameAndType [getExternalStorageDirectory ()Ljava/io/File;]
+  + NameAndType [getExternalStorageState ()Ljava/lang/String;]
+  + NameAndType [isDirectory ()Z]
+  + NameAndType [mkdirs ()Z]
+  + NameAndType [printStackTrace ()V]
+  + NameAndType [read ([B)I]
+  + NameAndType [toByteArray ()[B]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [write ([B)V]
+  + NameAndType [write ([BII)V]
+  + Utf8 [%s cannot be created!]
+  + Utf8 [%s is not a directory!]
+  + Utf8 [()Ljava/io/File;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [()[B]
+  + Utf8 [(Ljava/io/File;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 [([B)I]
+  + Utf8 [([B)V]
+  + Utf8 [([BII)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [StackMapTable]
+  + Utf8 [[B]
+  + Utf8 [a]
+  + Utf8 [android/os/Environment]
+  + Utf8 [b]
+  + Utf8 [close]
+  + Utf8 [com/ybcx/ipintu/d/b]
+  + Utf8 [equals]
+  + Utf8 [exists]
+  + Utf8 [format]
+  + Utf8 [getBytes]
+  + Utf8 [getExternalStorageDirectory]
+  + Utf8 [getExternalStorageState]
+  + Utf8 [iptuser]
+  + Utf8 [isDirectory]
+  + Utf8 [java/io/ByteArrayOutputStream]
+  + Utf8 [java/io/File]
+  + Utf8 [java/io/FileInputStream]
+  + Utf8 [java/io/FileOutputStream]
+  + Utf8 [java/io/IOException]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [mkdirs]
+  + Utf8 [mounted]
+  + Utf8 [printStackTrace]
+  + Utf8 [read]
+  + Utf8 [toByteArray]
+  + Utf8 [toString]
+  + Utf8 [write]
+
+Fields (count = 0):
+
+Methods (count = 5):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #35
+        - Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a()Ljava/io/File;
+    Access flags: 0x9
+      = public static java.io.File a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 97, locals = 1, stack = 7):
+      [0] invokestatic #17
+        - Methodref [android/os/Environment.getExternalStorageState ()Ljava/lang/String;]
+      [3] ldc #4
+        - String [mounted]
+      [5] invokevirtual #37
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [8] ifne +5 (target=13)
+      [11] aconst_null
+      [12] areturn
+      [13] new #9
+        - Class [java/io/File]
+      [16] dup
+      [17] invokestatic #16
+        - Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
+      [20] ldc #3
+        - String [iptuser]
+      [22] invokespecial #22
+        - Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
+      [25] dup
+      [26] astore_0 v0
+      [27] invokevirtual #23
+        - Methodref [java/io/File.exists ()Z]
+      [30] ifne +34 (target=64)
+      [33] aload_0 v0
+      [34] invokevirtual #25
+        - Methodref [java/io/File.mkdirs ()Z]
+      [37] ifne +27 (target=64)
+      [40] new #12
+        - Class [java/io/IOException]
+      [43] dup
+      [44] ldc #1
+        - String [%s cannot be created!]
+      [46] iconst_1
+      [47] anewarray #14
+        - Class [java/lang/Object]
+      [50] dup
+      [51] iconst_0
+      [52] aload_0 v0
+      [53] invokevirtual #26
+        - Methodref [java/io/File.toString ()Ljava/lang/String;]
+      [56] aastore
+      [57] invokestatic #38
+        - Methodref [java/lang/String.format (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+      [60] invokespecial #33
+        - Methodref [java/io/IOException.<init> (Ljava/lang/String;)V]
+      [63] athrow
+      [64] aload_0 v0
+      [65] invokevirtual #24
+        - Methodref [java/io/File.isDirectory ()Z]
+      [68] ifne +27 (target=95)
+      [71] new #12
+        - Class [java/io/IOException]
+      [74] dup
+      [75] ldc #2
+        - String [%s is not a directory!]
+      [77] iconst_1
+      [78] anewarray #14
+        - Class [java/lang/Object]
+      [81] dup
+      [82] iconst_0
+      [83] aload_0 v0
+      [84] invokevirtual #26
+        - Methodref [java/io/File.toString ()Ljava/lang/String;]
+      [87] aastore
+      [88] invokestatic #38
+        - Methodref [java/lang/String.format (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+      [91] invokespecial #33
+        - Methodref [java/io/IOException.<init> (Ljava/lang/String;)V]
+      [94] athrow
+      [95] aload_0 v0
+      [96] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [13] Var: ..., Stack: (empty)
+        - [64] Var: ...[a:java/io/File], Stack: (empty)
+        - [95] Var: ..., Stack: (empty)
+  + Method:       a(Ljava/lang/String;)Ljava/lang/String;
+    Access flags: 0x9
+      = public static java.lang.String a(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 79, locals = 5, stack = 4):
+      [0] new #8
+        - Class [java/io/ByteArrayOutputStream]
+      [3] dup
+      [4] invokespecial #18
+        - Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+      [7] astore_1 v1
+      [8] aconst_null
+      [9] astore_2 v2
+      [10] new #10
+        - Class [java/io/FileInputStream]
+      [13] dup
+      [14] aload_0 v0
+      [15] invokespecial #27
+        - Methodref [java/io/FileInputStream.<init> (Ljava/lang/String;)V]
+      [18] astore_0 v0
+      [19] sipush 1024
+      [22] newarray 8
+      [24] astore v4
+      [26] goto +11 (target=37)
+      [29] aload_1 v1
+      [30] aload v4
+      [32] iconst_0
+      [33] iload_3 v3
+      [34] invokevirtual #21
+        - Methodref [java/io/ByteArrayOutputStream.write ([BII)V]
+      [37] aload_0 v0
+      [38] aload v4
+      [40] invokevirtual #29
+        - Methodref [java/io/FileInputStream.read ([B)I]
+      [43] dup
+      [44] istore_3 v3
+      [45] iconst_m1
+      [46] ificmpne -17 (target=29)
+      [49] aload_1 v1
+      [50] invokevirtual #20
+        - Methodref [java/io/ByteArrayOutputStream.toByteArray ()[B]
+      [53] astore_3 v3
+      [54] aload_0 v0
+      [55] invokevirtual #28
+        - Methodref [java/io/FileInputStream.close ()V]
+      [58] aload_1 v1
+      [59] invokevirtual #19
+        - Methodref [java/io/ByteArrayOutputStream.close ()V]
+      [62] new #15
+        - Class [java/lang/String]
+      [65] dup
+      [66] aload_3 v3
+      [67] invokespecial #36
+        - Methodref [java/lang/String.<init> ([B)V]
+      [70] astore_2 v2
+      [71] goto +6 (target=77)
+      [74] invokevirtual #34
+        - Methodref [java/lang/Exception.printStackTrace ()V]
+      [77] aload_2 v2
+      [78] areturn
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (10 -> 71: 74):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [29] Var: [a:java/lang/String][a:java/io/ByteArrayOutputStream][a:java/lang/String][a:java/io/FileInputStream][i][a:[B], Stack: 
+        - [37] Var: ..., Stack: (empty)
+        - [74] Var: [a:java/lang/String][a:java/io/ByteArrayOutputStream][a:java/lang/String], Stack: [a:java/lang/Exception]
+        - [77] Var: ..., Stack: (empty)
+  + Method:       b(Ljava/lang/String;)I
+    Access flags: 0x9
+      = public static int b(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 47, locals = 4, stack = 3):
+      [0] iconst_0
+      [1] istore_1 v1
+      [2] new #10
+        - Class [java/io/FileInputStream]
+      [5] dup
+      [6] aload_0 v0
+      [7] invokespecial #27
+        - Methodref [java/io/FileInputStream.<init> (Ljava/lang/String;)V]
+      [10] astore_0 v0
+      [11] sipush 1024
+      [14] newarray 8
+      [16] astore_3 v3
+      [17] goto +7 (target=24)
+      [20] iload_1 v1
+      [21] iload_2 v2
+      [22] iadd
+      [23] istore_1 v1
+      [24] aload_0 v0
+      [25] aload_3 v3
+      [26] invokevirtual #29
+        - Methodref [java/io/FileInputStream.read ([B)I]
+      [29] dup
+      [30] istore_2 v2
+      [31] iconst_m1
+      [32] ificmpne -12 (target=20)
+      [35] aload_0 v0
+      [36] invokevirtual #28
+        - Methodref [java/io/FileInputStream.close ()V]
+      [39] goto +6 (target=45)
+      [42] invokevirtual #34
+        - Methodref [java/lang/Exception.printStackTrace ()V]
+      [45] iload_1 v1
+      [46] ireturn
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (2 -> 39: 42):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [20] Var: [a:java/lang/String][i][a:java/io/FileInputStream][i][a:[B], Stack: 
+        - [24] Var: ..., Stack: (empty)
+        - [42] Var: [a:java/lang/String][i], Stack: [a:java/lang/Exception]
+        - [45] Var: ..., Stack: (empty)
+  + Method:       a(Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x9
+      = public static void a(java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 28, locals = 2, stack = 3):
+      [0] new #11
+        - Class [java/io/FileOutputStream]
+      [3] dup
+      [4] aload_0 v0
+      [5] invokespecial #30
+        - Methodref [java/io/FileOutputStream.<init> (Ljava/lang/String;)V]
+      [8] astore_0 v0
+      [9] aload_1 v1
+      [10] invokevirtual #39
+        - Methodref [java/lang/String.getBytes ()[B]
+      [13] astore_1 v1
+      [14] aload_0 v0
+      [15] aload_1 v1
+      [16] invokevirtual #32
+        - Methodref [java/io/FileOutputStream.write ([B)V]
+      [19] aload_0 v0
+      [20] invokevirtual #31
+        - Methodref [java/io/FileOutputStream.close ()V]
+      [23] return
+      [24] invokevirtual #34
+        - Methodref [java/lang/Exception.printStackTrace ()V]
+      [27] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (0 -> 23: 24):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [24] Var: ..., Stack: [a:java/lang/Exception]
+        - [27] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
 + Program class: com/ybcx/ipintu/b/d
   Superclass:    android/database/sqlite/SQLiteOpenHelper
   Major version: 0x32
@@ -13199,245 +13528,6 @@ Methods (count = 3):
       [14] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-
-Class file attributes (count = 0):
-
-_____________________________________________________________________
-+ Program class: com/ybcx/ipintu/d/b
-  Superclass:    java/lang/Object
-  Major version: 0x32
-  Minor version: 0x0
-  Access flags:  0x31
-    = public final class com.ybcx.ipintu.d.b extends java.lang.Object
-
-Interfaces (count = 0):
-
-Constant Pool (count = 61):
-  - Class [[B]
-  - Class [com/ybcx/ipintu/d/b]
-  - Class [java/io/ByteArrayOutputStream]
-  - Class [java/io/FileInputStream]
-  - Class [java/io/FileOutputStream]
-  - Class [java/lang/Exception]
-  - Class [java/lang/Object]
-  - Class [java/lang/String]
-  - Methodref [java/io/ByteArrayOutputStream.<init> ()V]
-  - Methodref [java/io/ByteArrayOutputStream.close ()V]
-  - Methodref [java/io/ByteArrayOutputStream.toByteArray ()[B]
-  - Methodref [java/io/ByteArrayOutputStream.write ([BII)V]
-  - Methodref [java/io/FileInputStream.<init> (Ljava/lang/String;)V]
-  - Methodref [java/io/FileInputStream.close ()V]
-  - Methodref [java/io/FileInputStream.read ([B)I]
-  - Methodref [java/io/FileOutputStream.<init> (Ljava/lang/String;)V]
-  - Methodref [java/io/FileOutputStream.close ()V]
-  - Methodref [java/io/FileOutputStream.write ([B)V]
-  - Methodref [java/lang/Exception.printStackTrace ()V]
-  - Methodref [java/lang/Object.<init> ()V]
-  - Methodref [java/lang/String.<init> ([B)V]
-  - Methodref [java/lang/String.getBytes ()[B]
-  + NameAndType [<init> ()V]
-  + NameAndType [<init> (Ljava/lang/String;)V]
-  + NameAndType [<init> ([B)V]
-  + NameAndType [close ()V]
-  + NameAndType [getBytes ()[B]
-  + NameAndType [printStackTrace ()V]
-  + NameAndType [read ([B)I]
-  + NameAndType [toByteArray ()[B]
-  + NameAndType [write ([B)V]
-  + NameAndType [write ([BII)V]
-  + Utf8 [()V]
-  + Utf8 [()[B]
-  + Utf8 [(Ljava/lang/String;)I]
-  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
-  + Utf8 [(Ljava/lang/String;)V]
-  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
-  + Utf8 [([B)I]
-  + Utf8 [([B)V]
-  + Utf8 [([BII)V]
-  + Utf8 [<init>]
-  + Utf8 [Code]
-  + Utf8 [StackMapTable]
-  + Utf8 [[B]
-  + Utf8 [a]
-  + Utf8 [b]
-  + Utf8 [close]
-  + Utf8 [com/ybcx/ipintu/d/b]
-  + Utf8 [getBytes]
-  + Utf8 [java/io/ByteArrayOutputStream]
-  + Utf8 [java/io/FileInputStream]
-  + Utf8 [java/io/FileOutputStream]
-  + Utf8 [java/lang/Exception]
-  + Utf8 [java/lang/Object]
-  + Utf8 [java/lang/String]
-  + Utf8 [printStackTrace]
-  + Utf8 [read]
-  + Utf8 [toByteArray]
-  + Utf8 [write]
-
-Fields (count = 0):
-
-Methods (count = 4):
-  - Method:       <init>()V
-    Access flags: 0x1
-      = public b()
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
-      [0] aload_0 v0
-      [1] invokespecial #20
-        - Methodref [java/lang/Object.<init> ()V]
-      [4] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  + Method:       a(Ljava/lang/String;)Ljava/lang/String;
-    Access flags: 0x9
-      = public static java.lang.String a(java.lang.String)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 79, locals = 5, stack = 4):
-      [0] new #3
-        - Class [java/io/ByteArrayOutputStream]
-      [3] dup
-      [4] invokespecial #9
-        - Methodref [java/io/ByteArrayOutputStream.<init> ()V]
-      [7] astore_1 v1
-      [8] aconst_null
-      [9] astore_2 v2
-      [10] new #4
-        - Class [java/io/FileInputStream]
-      [13] dup
-      [14] aload_0 v0
-      [15] invokespecial #13
-        - Methodref [java/io/FileInputStream.<init> (Ljava/lang/String;)V]
-      [18] astore_0 v0
-      [19] sipush 1024
-      [22] newarray 8
-      [24] astore v4
-      [26] goto +11 (target=37)
-      [29] aload_1 v1
-      [30] aload v4
-      [32] iconst_0
-      [33] iload_3 v3
-      [34] invokevirtual #12
-        - Methodref [java/io/ByteArrayOutputStream.write ([BII)V]
-      [37] aload_0 v0
-      [38] aload v4
-      [40] invokevirtual #15
-        - Methodref [java/io/FileInputStream.read ([B)I]
-      [43] dup
-      [44] istore_3 v3
-      [45] iconst_m1
-      [46] ificmpne -17 (target=29)
-      [49] aload_1 v1
-      [50] invokevirtual #11
-        - Methodref [java/io/ByteArrayOutputStream.toByteArray ()[B]
-      [53] astore_3 v3
-      [54] aload_0 v0
-      [55] invokevirtual #14
-        - Methodref [java/io/FileInputStream.close ()V]
-      [58] aload_1 v1
-      [59] invokevirtual #10
-        - Methodref [java/io/ByteArrayOutputStream.close ()V]
-      [62] new #8
-        - Class [java/lang/String]
-      [65] dup
-      [66] aload_3 v3
-      [67] invokespecial #21
-        - Methodref [java/lang/String.<init> ([B)V]
-      [70] astore_2 v2
-      [71] goto +6 (target=77)
-      [74] invokevirtual #19
-        - Methodref [java/lang/Exception.printStackTrace ()V]
-      [77] aload_2 v2
-      [78] areturn
-      Code attribute exceptions (count = 1):
-      - ExceptionInfo (10 -> 71: 74):
-      - Class [java/lang/Exception]
-      Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 4):
-        - [29] Var: [a:java/lang/String][a:java/io/ByteArrayOutputStream][a:java/lang/String][a:java/io/FileInputStream][i][a:[B], Stack: 
-        - [37] Var: ..., Stack: (empty)
-        - [74] Var: [a:java/lang/String][a:java/io/ByteArrayOutputStream][a:java/lang/String], Stack: [a:java/lang/Exception]
-        - [77] Var: ..., Stack: (empty)
-  + Method:       b(Ljava/lang/String;)I
-    Access flags: 0x9
-      = public static int b(java.lang.String)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 47, locals = 4, stack = 3):
-      [0] iconst_0
-      [1] istore_1 v1
-      [2] new #4
-        - Class [java/io/FileInputStream]
-      [5] dup
-      [6] aload_0 v0
-      [7] invokespecial #13
-        - Methodref [java/io/FileInputStream.<init> (Ljava/lang/String;)V]
-      [10] astore_0 v0
-      [11] sipush 1024
-      [14] newarray 8
-      [16] astore_3 v3
-      [17] goto +7 (target=24)
-      [20] iload_1 v1
-      [21] iload_2 v2
-      [22] iadd
-      [23] istore_1 v1
-      [24] aload_0 v0
-      [25] aload_3 v3
-      [26] invokevirtual #15
-        - Methodref [java/io/FileInputStream.read ([B)I]
-      [29] dup
-      [30] istore_2 v2
-      [31] iconst_m1
-      [32] ificmpne -12 (target=20)
-      [35] aload_0 v0
-      [36] invokevirtual #14
-        - Methodref [java/io/FileInputStream.close ()V]
-      [39] goto +6 (target=45)
-      [42] invokevirtual #19
-        - Methodref [java/lang/Exception.printStackTrace ()V]
-      [45] iload_1 v1
-      [46] ireturn
-      Code attribute exceptions (count = 1):
-      - ExceptionInfo (2 -> 39: 42):
-      - Class [java/lang/Exception]
-      Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 4):
-        - [20] Var: [a:java/lang/String][i][a:java/io/FileInputStream][i][a:[B], Stack: 
-        - [24] Var: ..., Stack: (empty)
-        - [42] Var: [a:java/lang/String][i], Stack: [a:java/lang/Exception]
-        - [45] Var: ..., Stack: (empty)
-  + Method:       a(Ljava/lang/String;Ljava/lang/String;)V
-    Access flags: 0x9
-      = public static void a(java.lang.String,java.lang.String)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 28, locals = 2, stack = 3):
-      [0] new #5
-        - Class [java/io/FileOutputStream]
-      [3] dup
-      [4] aload_0 v0
-      [5] invokespecial #16
-        - Methodref [java/io/FileOutputStream.<init> (Ljava/lang/String;)V]
-      [8] astore_0 v0
-      [9] aload_1 v1
-      [10] invokevirtual #22
-        - Methodref [java/lang/String.getBytes ()[B]
-      [13] astore_1 v1
-      [14] aload_0 v0
-      [15] aload_1 v1
-      [16] invokevirtual #18
-        - Methodref [java/io/FileOutputStream.write ([B)V]
-      [19] aload_0 v0
-      [20] invokevirtual #17
-        - Methodref [java/io/FileOutputStream.close ()V]
-      [23] return
-      [24] invokevirtual #19
-        - Methodref [java/lang/Exception.printStackTrace ()V]
-      [27] return
-      Code attribute exceptions (count = 1):
-      - ExceptionInfo (0 -> 23: 24):
-      - Class [java/lang/Exception]
-      Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 2):
-        - [24] Var: ..., Stack: [a:java/lang/Exception]
-        - [27] Var: ..., Stack: (empty)
 
 Class file attributes (count = 0):
 
@@ -14679,6 +14769,145 @@ Methods (count = 1):
       [4] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/ybcx/ipintu/ViewLogFile
+  Superclass:    android/app/Activity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.ybcx.ipintu.ViewLogFile extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 58):
+  - Integer [2130903040]
+  - Integer [2131034112]
+  - String [applicant_check_log.txt]
+  - Class [android/app/Activity]
+  - Class [android/os/Bundle]
+  - Class [android/widget/TextView]
+  - Class [com/ybcx/ipintu/ViewLogFile]
+  - Class [com/ybcx/ipintu/d/b]
+  - Class [java/io/File]
+  - Class [java/io/IOException]
+  - Methodref [android/app/Activity.<init> ()V]
+  - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+  - Methodref [com/ybcx/ipintu/ViewLogFile.findViewById (I)Landroid/view/View;]
+  - Methodref [com/ybcx/ipintu/ViewLogFile.setContentView (I)V]
+  - Methodref [com/ybcx/ipintu/d/b.a ()Ljava/io/File;]
+  - Methodref [com/ybcx/ipintu/d/b.a (Ljava/lang/String;)Ljava/lang/String;]
+  - Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
+  - Methodref [java/io/File.getAbsolutePath ()Ljava/lang/String;]
+  - Methodref [java/io/IOException.printStackTrace ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/io/File;Ljava/lang/String;)V]
+  + NameAndType [a ()Ljava/io/File;]
+  + NameAndType [a (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [getAbsolutePath ()Ljava/lang/String;]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [printStackTrace ()V]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setText (Ljava/lang/CharSequence;)V]
+  + Utf8 [()Ljava/io/File;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Ljava/io/File;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/CharSequence;)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/os/Bundle]
+  + Utf8 [android/widget/TextView]
+  + Utf8 [applicant_check_log.txt]
+  + Utf8 [com/ybcx/ipintu/ViewLogFile]
+  + Utf8 [com/ybcx/ipintu/d/b]
+  + Utf8 [findViewById]
+  + Utf8 [getAbsolutePath]
+  + Utf8 [java/io/File]
+  + Utf8 [java/io/IOException]
+  + Utf8 [onCreate]
+  + Utf8 [printStackTrace]
+  + Utf8 [setContentView]
+  + Utf8 [setText]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public ViewLogFile()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #11
+        - Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 52, locals = 3, stack = 4):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #12
+        - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        - Integer [2130903040]
+      [8] invokevirtual #15
+        - Methodref [com/ybcx/ipintu/ViewLogFile.setContentView (I)V]
+      [11] aload_0 v0
+      [12] ldc #2
+        - Integer [2131034112]
+      [14] invokevirtual #14
+        - Methodref [com/ybcx/ipintu/ViewLogFile.findViewById (I)Landroid/view/View;]
+      [17] checkcast #6
+        - Class [android/widget/TextView]
+      [20] astore_1 v1
+      [21] invokestatic #16
+        - Methodref [com/ybcx/ipintu/d/b.a ()Ljava/io/File;]
+      [24] astore_2 v2
+      [25] new #9
+        - Class [java/io/File]
+      [28] dup
+      [29] aload_2 v2
+      [30] ldc #3
+        - String [applicant_check_log.txt]
+      [32] invokespecial #18
+        - Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
+      [35] invokevirtual #19
+        - Methodref [java/io/File.getAbsolutePath ()Ljava/lang/String;]
+      [38] invokestatic #17
+        - Methodref [com/ybcx/ipintu/d/b.a (Ljava/lang/String;)Ljava/lang/String;]
+      [41] astore_2 v2
+      [42] aload_1 v1
+      [43] aload_2 v2
+      [44] invokevirtual #13
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [47] return
+      [48] invokevirtual #20
+        - Methodref [java/io/IOException.printStackTrace ()V]
+      [51] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (21 -> 47: 48):
+      - Class [java/io/IOException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [48] Var: [a:com/ybcx/ipintu/ViewLogFile][a:android/os/Bundle][a:android/widget/TextView], Stack: [a:java/io/IOException]
+        - [51] Var: ..., Stack: (empty)
 
 Class file attributes (count = 0):
 

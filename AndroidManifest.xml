@@ -19,7 +19,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <!-- 显示日志, 2012/03/21 -->
+		<activity
+		    android:label="@string/log_file"
+		    android:name=".ViewLogFile">
+		    <intent-filter>
+				<action android:name="android.intent.action.viewlog" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
         <service android:name=".service.UserService" />
 
         <receiver android:name=".service.BootReceiver" >

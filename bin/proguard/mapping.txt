@@ -53,6 +53,8 @@ com.ybcx.ipintu.IptUserListenerActivity$4 -> com.ybcx.ipintu.b:
 com.ybcx.ipintu.IptUserListenerActivity$5 -> com.ybcx.ipintu.c:
     com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
+com.ybcx.ipintu.ViewLogFile -> com.ybcx.ipintu.ViewLogFile:
+    void onCreate(android.os.Bundle) -> onCreate
 com.ybcx.ipintu.db.Applycant -> com.ybcx.ipintu.b.e:
     java.lang.String id -> a
     java.lang.String account -> b
@@ -202,6 +204,7 @@ com.ybcx.ipintu.util.DateTimeHelper -> com.ybcx.ipintu.d.a:
     java.text.DateFormat AGO_FULL_DATE_FORMATTER -> a
     java.lang.String getRelativeTimeByFormatDate(java.lang.String,android.content.Context) -> a
 com.ybcx.ipintu.util.FileHelper -> com.ybcx.ipintu.d.b:
+    java.io.File getBasePath() -> a
     java.lang.String readFileSdcard(java.lang.String) -> a
     int getFileLength(java.lang.String) -> b
     void writeFileSdcard(java.lang.String,java.lang.String) -> a

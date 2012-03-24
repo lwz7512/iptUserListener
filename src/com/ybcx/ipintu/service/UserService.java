@@ -58,7 +58,7 @@ import com.ybcx.ipintu.util.PreferenceConst;
 public class UserService extends Service {
 	
     private static final String TAG = "UserService";
-    private static final String LOGFILENAME = "applicant_check_log.txt";
+    public static final String LOGFILENAME = "applicant_check_log.txt";
 
     private WakeLock mWakeLock;
     private NotificationManager mNotificationManager;
@@ -100,6 +100,10 @@ public class UserService extends Service {
 				
 				String now = getNowString();
 				if(!logFile.exists()){//如果不存在，新建txt文件
+					//FIXME, 创建空文件，解决三星手机没文件的问题
+					//2012/03/21
+					logFile.createNewFile();
+					//写内容
 					FileHelper.writeFileSdcard(logFilePath, ">>>file created at "+now);
 				}else{
 					//大于10K，重新写文件

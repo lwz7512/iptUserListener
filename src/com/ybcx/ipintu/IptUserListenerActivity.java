@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -178,11 +179,16 @@ public class IptUserListenerActivity extends Activity {
 	protected static final int OPTIONS_MENU_ID_CLEAR = 1;
 	protected static final int OPTIONS_MENU_ID_PREFERENCES = 2;
 	protected static final int OPTIONS_MENU_ID_ABOUT = 3;
+	protected static final int OPTIONS_MENU_ID_LOG = 4;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		MenuItem item;
+		
+		//查看日志, 2012/03/21
+		item = menu.add(0, OPTIONS_MENU_ID_LOG, 0, R.string.omenu_viewlog);
+		item.setIcon(android.R.drawable.ic_menu_recent_history);
 		
 		item = menu.add(0, OPTIONS_MENU_ID_CLEAR, 0, R.string.omenu_clear);
 		item.setIcon(android.R.drawable.ic_menu_delete);
@@ -204,9 +210,19 @@ public class IptUserListenerActivity extends Activity {
 			clearAllRecordInCache();
 			return true;
 			
+		case 	OPTIONS_MENU_ID_LOG:
+			showLogResult();
+			return true;
+			
 		}
 
 		return super.onOptionsItemSelected(item);
+	}
+	
+	private void showLogResult(){
+		Intent it = new Intent();
+		it.setClass(this, ViewLogFile.class);
+		this.startActivity(it);
 	}
 	
 	//FIXME, CLEAR ALL RECORD FOR CONVEVIENCE...
