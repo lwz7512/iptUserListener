@@ -1287,16 +1287,16 @@ Methods (count = 17):
       [102] invokespecial #126
         - Methodref [com/ybcx/ipintu/IptUserListenerActivity.a (Ljava/lang/String;)V]
       [105] return
-      [106] aload_2 v2
-      [107] invokevirtual #165
-        - Methodref [java/io/File.lastModified ()J]
-      [110] new #80
+      [106] new #80
         - Class [java/util/Date]
-      [113] dup
-      [114] invokespecial #177
+      [109] dup
+      [110] invokespecial #177
         - Methodref [java/util/Date.<init> ()V]
-      [117] invokevirtual #178
+      [113] invokevirtual #178
         - Methodref [java/util/Date.getTime ()J]
+      [116] aload_2 v2
+      [117] invokevirtual #165
+        - Methodref [java/io/File.lastModified ()J]
       [120] lsub
       [121] ldc2_w #83
         - Long [600000]
