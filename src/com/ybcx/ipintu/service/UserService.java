@@ -87,10 +87,12 @@ public class UserService extends Service {
 
         //FIXME,放在这里执行，在 onStartCommand很奇怪有时候不执行？
         //2012/03/17
+        //放在这里也不行，服务有时候还是不执行，只好在应用打开时检查并自动启动了
+        //2012/04/02
         requestNewUsers();
     }
     
-    private static void writeLogFileToSDCard(String msg){
+    public static void writeLogFileToSDCard(String msg){
     	try {
 			File logdir = FileHelper.getBasePath();
 			if(logdir!=null){
@@ -142,6 +144,8 @@ public class UserService extends Service {
         mWakeLock.release();
         super.onDestroy();
     }
+    
+ 
   
  
     private void requestNewUsers() {
@@ -155,7 +159,10 @@ public class UserService extends Service {
         	Log.d(TAG, "TO Retrieve new applycants at: "+df.format(new Date()));
             
         	//执行前先检查网络状况
-        	if(!isNetworkAvailable(UserService.this)) return;
+        	if(!isNetworkAvailable(UserService.this)){
+        		writeLogFileToSDCard("network inavailable, do not fetch data!");
+        		return;
+        	}
         	
             mRetrieveTask = new RetrieveUserTask();                        
             mRetrieveTask.setListener(mRetrieveTaskListener);

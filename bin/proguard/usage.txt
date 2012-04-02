@@ -6,6 +6,7 @@ com.ybcx.ipintu.IptUserListenerActivity:
     protected static final int OPTIONS_MENU_ID_PREFERENCES
     protected static final int OPTIONS_MENU_ID_ABOUT
     protected static final int OPTIONS_MENU_ID_LOG
+    protected static final int OPTIONS_MENU_ID_CHECK
 com.ybcx.ipintu.R
 com.ybcx.ipintu.R$attr
 com.ybcx.ipintu.R$drawable
@@ -79,7 +80,7 @@ com.ybcx.ipintu.service.BootReceiver:
 com.ybcx.ipintu.service.UserService:
     private static final java.lang.String TAG
     public static final java.lang.String LOGFILENAME
-    266:272:public static void unschedule(android.content.Context)
+    273:279:public static void unschedule(android.content.Context)
 com.ybcx.ipintu.task.Feedback:
     public abstract boolean isAvailable()
     public abstract void cancel(java.lang.CharSequence)

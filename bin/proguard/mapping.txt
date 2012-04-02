@@ -8,7 +8,7 @@ com.ybcx.ipintu.IptUserAdapter -> com.ybcx.ipintu.a:
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
     void refresh(java.util.List) -> a
     void clear() -> a
-com.ybcx.ipintu.IptUserAdapter$ViewHolder -> com.ybcx.ipintu.g:
+com.ybcx.ipintu.IptUserAdapter$ViewHolder -> com.ybcx.ipintu.h:
     android.widget.TextView account -> a
     android.widget.TextView applyTime -> b
     android.widget.TextView applyReason -> c
@@ -19,13 +19,16 @@ com.ybcx.ipintu.IptUserListenerActivity -> com.ybcx.ipintu.IptUserListenerActivi
     com.ybcx.ipintu.db.Applycant currentUser -> d
     com.ybcx.ipintu.task.GenericTask mSendTask -> e
     android.content.SharedPreferences mPref -> f
-    android.widget.AdapterView$OnItemClickListener listener -> g
-    android.content.DialogInterface$OnClickListener okListener -> h
-    android.content.DialogInterface$OnClickListener cancelListener -> i
-    com.ybcx.ipintu.task.TaskListener mSendTaskListener -> j
-    android.content.DialogInterface$OnClickListener settingIntervalListener -> k
+    com.ybcx.ipintu.task.GenericTask mRetrieveTask -> g
+    android.widget.AdapterView$OnItemClickListener listener -> h
+    android.content.DialogInterface$OnClickListener okListener -> i
+    android.content.DialogInterface$OnClickListener cancelListener -> j
+    com.ybcx.ipintu.task.TaskListener mSendTaskListener -> k
+    com.ybcx.ipintu.task.TaskListener mRetrieveTaskListener -> l
+    android.content.DialogInterface$OnClickListener settingIntervalListener -> m
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
+    void updateProgress(java.lang.String) -> a
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
     void setPreferenceValue(int) -> a
@@ -34,15 +37,18 @@ com.ybcx.ipintu.IptUserListenerActivity -> com.ybcx.ipintu.IptUserListenerActivi
     void access$1(com.ybcx.ipintu.IptUserListenerActivity,com.ybcx.ipintu.db.Applycant) -> a
     void access$2(com.ybcx.ipintu.IptUserListenerActivity) -> b
     void access$3(com.ybcx.ipintu.IptUserListenerActivity,boolean) -> a
+    void access$4(com.ybcx.ipintu.IptUserListenerActivity,java.lang.String) -> a
     void access$5(com.ybcx.ipintu.IptUserListenerActivity) -> c
-    void access$6(com.ybcx.ipintu.IptUserListenerActivity,int) -> a
-com.ybcx.ipintu.IptUserListenerActivity$1 -> com.ybcx.ipintu.d:
+    void access$6(com.ybcx.ipintu.IptUserListenerActivity,java.util.List) -> a
+    com.ybcx.ipintu.db.UserCacheImpl access$7(com.ybcx.ipintu.IptUserListenerActivity) -> d
+    void access$8(com.ybcx.ipintu.IptUserListenerActivity,int) -> a
+com.ybcx.ipintu.IptUserListenerActivity$1 -> com.ybcx.ipintu.e:
     com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.ybcx.ipintu.IptUserListenerActivity$2 -> com.ybcx.ipintu.e:
+com.ybcx.ipintu.IptUserListenerActivity$2 -> com.ybcx.ipintu.f:
     com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.ybcx.ipintu.IptUserListenerActivity$3 -> com.ybcx.ipintu.f:
+com.ybcx.ipintu.IptUserListenerActivity$3 -> com.ybcx.ipintu.g:
     com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.ybcx.ipintu.IptUserListenerActivity$4 -> com.ybcx.ipintu.b:
@@ -51,6 +57,11 @@ com.ybcx.ipintu.IptUserListenerActivity$4 -> com.ybcx.ipintu.b:
     void onPostExecute$50f0fa41(com.ybcx.ipintu.task.TaskResult) -> a
     void deliverResponseString$552c4e01() -> b
 com.ybcx.ipintu.IptUserListenerActivity$5 -> com.ybcx.ipintu.c:
+    com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
+    void onPreExecute$50df3973() -> a
+    void onPostExecute$50f0fa41(com.ybcx.ipintu.task.TaskResult) -> a
+    void deliverRetrievedList(java.util.List) -> a
+com.ybcx.ipintu.IptUserListenerActivity$6 -> com.ybcx.ipintu.d:
     com.ybcx.ipintu.IptUserListenerActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.ybcx.ipintu.ViewLogFile -> com.ybcx.ipintu.ViewLogFile:
@@ -130,15 +141,14 @@ com.ybcx.ipintu.service.UserService -> com.ybcx.ipintu.service.UserService:
     com.ybcx.ipintu.db.UserCacheImpl cache -> d
     com.ybcx.ipintu.task.TaskListener mRetrieveTaskListener -> e
     void onCreate() -> onCreate
-    void writeLogFileToSDCard(java.lang.String) -> b
+    void writeLogFileToSDCard(java.lang.String) -> a
     int onStartCommand(android.content.Intent,int,int) -> onStartCommand
     void onDestroy() -> onDestroy
     void schedule(android.content.Context) -> a
     boolean isNetworkAvailable(android.content.Context) -> b
     android.os.IBinder onBind(android.content.Intent) -> onBind
-    void access$0(java.lang.String) -> a
-    void access$1(com.ybcx.ipintu.service.UserService,int) -> a
-    void access$2(com.ybcx.ipintu.service.UserService,java.util.List) -> a
+    void access$0(com.ybcx.ipintu.service.UserService,int) -> a
+    void access$1(com.ybcx.ipintu.service.UserService,java.util.List) -> a
 com.ybcx.ipintu.service.UserService$1 -> com.ybcx.ipintu.service.a:
     com.ybcx.ipintu.service.UserService this$0 -> a
     void onPostExecute$50f0fa41(com.ybcx.ipintu.task.TaskResult) -> a
