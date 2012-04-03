@@ -31,6 +31,7 @@ com.ybcx.ipintu.IptUserListenerActivity -> com.ybcx.ipintu.IptUserListenerActivi
     void updateProgress(java.lang.String) -> a
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void requestNewUsers() -> a
     void setPreferenceValue(int) -> a
     void onDestroy() -> onDestroy
     com.ybcx.ipintu.IptUserAdapter access$0(com.ybcx.ipintu.IptUserListenerActivity) -> a

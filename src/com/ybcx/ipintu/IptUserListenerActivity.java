@@ -80,16 +80,17 @@ public class IptUserListenerActivity extends Activity {
 		//FIXME, just for debug...
 //		setPreferenceValue(2);
 //		UserService.schedule(getApplicationContext());
+		
+		//FIXME, 检查日志，分析日期，如果修改时间超过10分钟表示服务没有在运行
+		//自动重启服务，并提示服务已经重启，如果10分钟之内提示服务正在运行
+		//2012/04/02
+		detectServiceStatus();
 	}	
 	
 	public void onResume() {
 		super.onResume();
 		List<Applycant> users = cache.getNewApplycants();
-		user_adptr.refresh(users);
-		//FIXME, 检查日志，分析日期，如果修改时间超过10分钟表示服务没有在运行
-		//自动重启服务，并提示服务已经重启，如果10分钟之内提示服务正在运行
-		//2012/04/02
-		detectServiceStatus();		
+		user_adptr.refresh(users);				
 	}
 	
 	private void detectServiceStatus(){
@@ -112,8 +113,11 @@ public class IptUserListenerActivity extends Activity {
 				long tenMinutes = 10*60*1000;
 				if(diffTime>tenMinutes){
 					//并重启服务
-					UserService.schedule(getApplicationContext());
 					updateProgress("service rescheduled!");
+					//立即查看下
+					requestNewUsers();
+					
+					UserService.schedule(getApplicationContext());
 				}else{
 					updateProgress("service already running!");
 				}
@@ -340,6 +344,9 @@ public class IptUserListenerActivity extends Activity {
 	        		cacheApplycants(applycants);
 	        		List<Applycant> users = cache.getNewApplycants();
 	        		user_adptr.refresh(users);
+	        		updateProgress(num+" applycants waiting to pass!");
+	        	}else{
+	        		updateProgress("No applycants recently!");
 	        	}
 	        }
 	       
