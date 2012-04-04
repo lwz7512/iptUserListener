@@ -84,12 +84,60 @@ public class UserService extends Service {
        
         //初始化缓存
         cache = new UserCacheImpl(this.getApplicationContext());    
-
-        //FIXME,放在这里执行，在 onStartCommand很奇怪有时候不执行？
-        //2012/03/17
-        //放在这里也不行，服务有时候还是不执行，只好在应用打开时检查并自动启动了
-        //2012/04/02
+       
+    }
+    
+ 
+    
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {       
+        Log.d(TAG, "Start Once");
+        
         requestNewUsers();
+        
+        return START_NOT_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.d(TAG, "Service Destroyed!.");
+
+        if (mRetrieveTask != null
+                && mRetrieveTask.getStatus() == GenericTask.Status.RUNNING) {
+            mRetrieveTask.cancel(true);
+        }        
+        mWakeLock.release();
+        super.onDestroy();
+    }
+    
+  
+ 
+    private void requestNewUsers() {
+    	    	
+    	if (mRetrieveTask != null
+                && mRetrieveTask.getStatus() == GenericTask.Status.RUNNING) {
+            return;
+        } else {
+        	
+        	DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        	Log.d(TAG, "TO Retrieve new applycants at: "+df.format(new Date()));
+            
+        	//执行前先检查网络状况
+        	if(!isNetworkAvailable(UserService.this)){
+        		writeLogFileToSDCard("network inavailable, to stop service!");
+        		//FIXME, 这里必须要停止服务，否则永远再起不来了
+        		//2012/04/4
+            	stop();
+        		return;
+        	}
+        	
+            mRetrieveTask = new RetrieveUserTask();                        
+            mRetrieveTask.setListener(mRetrieveTaskListener);
+            mRetrieveTask.execute(new TaskParams());
+            
+            writeLogFileToSDCard("to Retrieve new applycant...");
+        }
+    	
     }
     
     public static void writeLogFileToSDCard(String msg){
@@ -126,53 +174,6 @@ public class UserService extends Service {
 		}
     }
     
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {       
-        Log.d(TAG, "Start Once");
-        
-        return super.onStartCommand(intent, flags, startId);
-    }
-
-    @Override
-    public void onDestroy() {
-        Log.d(TAG, "Service Destroyed!.");
-
-        if (mRetrieveTask != null
-                && mRetrieveTask.getStatus() == GenericTask.Status.RUNNING) {
-            mRetrieveTask.cancel(true);
-        }        
-        mWakeLock.release();
-        super.onDestroy();
-    }
-    
- 
-  
- 
-    private void requestNewUsers() {
-    	    	
-    	if (mRetrieveTask != null
-                && mRetrieveTask.getStatus() == GenericTask.Status.RUNNING) {
-            return;
-        } else {
-        	
-        	DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
-        	Log.d(TAG, "TO Retrieve new applycants at: "+df.format(new Date()));
-            
-        	//执行前先检查网络状况
-        	if(!isNetworkAvailable(UserService.this)){
-        		writeLogFileToSDCard("network inavailable, do not fetch data!");
-        		return;
-        	}
-        	
-            mRetrieveTask = new RetrieveUserTask();                        
-            mRetrieveTask.setListener(mRetrieveTaskListener);
-            mRetrieveTask.execute(new TaskParams());
-            
-            writeLogFileToSDCard("to Retrieve new applycant...");
-        }
-    	
-    }
-    
     private static String getNowString(){
     	DateFormat df = new SimpleDateFormat("MM-dd HH:mm");
     	return df.format(new Date());
@@ -192,10 +193,8 @@ public class UserService extends Service {
         	} else if (result == TaskResult.JSON_PARSE_ERROR) {
         		Log.e(TAG, "json data parse error!");
         	}
-            //***STOP SERVICE!***
-            //任务完成后就停止销毁，等待AlarmManager下一次创建
-            Log.d(TAG, "to stop UserService...");
-            stopSelf();
+        	//服务运行结束
+        	stop();
         }
         @Override
         public void deliverRetrievedList(List<Object> applycants){
@@ -211,6 +210,13 @@ public class UserService extends Service {
         }
        
     };
+    
+    private void stop(){
+    	 //***STOP SERVICE!***
+        //任务完成后就停止销毁，等待AlarmManager下一次创建
+        Log.d(TAG, "to stop UserService...");
+        stopSelf();
+    }
     
     private void cacheApplycants(List<Object> applycants){
     	ArrayList<Applycant> users = new ArrayList<Applycant>();

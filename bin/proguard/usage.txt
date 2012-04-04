@@ -80,7 +80,7 @@ com.ybcx.ipintu.service.BootReceiver:
 com.ybcx.ipintu.service.UserService:
     private static final java.lang.String TAG
     public static final java.lang.String LOGFILENAME
-    273:279:public static void unschedule(android.content.Context)
+    279:285:public static void unschedule(android.content.Context)
 com.ybcx.ipintu.task.Feedback:
     public abstract boolean isAvailable()
     public abstract void cancel(java.lang.CharSequence)

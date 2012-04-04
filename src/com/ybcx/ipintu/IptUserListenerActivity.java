@@ -111,13 +111,9 @@ public class IptUserListenerActivity extends Activity {
 			}else{//通过文件最后修改时间来检查服务状态
 				long diffTime = new Date().getTime()-logFile.lastModified();
 				long tenMinutes = 10*60*1000;
-				if(diffTime>tenMinutes){
-					//并重启服务
-					updateProgress("service rescheduled!");
+				if(diffTime>tenMinutes){					
 					//立即查看下
-					requestNewUsers();
-					
-					UserService.schedule(getApplicationContext());
+					requestNewUsers();					
 				}else{
 					updateProgress("service already running!");
 				}
